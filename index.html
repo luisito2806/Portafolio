@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luis Angel Vazquez Estrada | Portafolio</title>
+  <meta name="description" content="Portafolio de Luis Angel Vazquez Estrada">
+  <style>
+    :root {
+      --fondo: #f7f5f0;
+      --superficie: #ffffff;
+      --texto: #22252a;
+      --texto-suave: #5c626b;
+      --acento: #1f6f5c;
+      --borde: #dfdbd2;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #16191d;
+        --superficie: #1f2329;
+        --texto: #eceae5;
+        --texto-suave: #a3a9b2;
+        --acento: #6cc7ae;
+        --borde: #343a42;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--acento);
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navegación */
+    nav {
+      border-bottom: 1px solid var(--borde);
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      padding: 16px 0;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--texto-suave);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--acento);
+    }
+
+    
+    .encabezado {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 64px 0;
+    }
+
+    .foto {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--superficie);
+      border: 2px dashed var(--borde);
+      border-radius: 8px;
+      color: var(--texto-suave);
+      text-align: center;
+      padding: 16px;
+    }
+
+    .foto img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      margin-bottom: 12px;
+    }
+
+    .titulo {
+      color: var(--acento);
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+    }
+
+    .resumen {
+      color: var(--texto-suave);
+    }
+
+    /* Secciones */
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--borde);
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    p + p {
+      margin-top: 12px;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .tarjeta {
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .tarjeta p {
+      color: var(--texto-suave);
+      font-size: 0.95rem;
+    }
+
+    .tarjeta a {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .habilidades li {
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.95rem;
+    }
+
+    .contacto {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--borde);
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+      padding: 24px 0;
+    }
+
+    @media (max-width: 640px) {
+      .encabezado {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0;
+      }
+
+      .foto {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="contenedor">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="contenedor">
+    <header class="encabezado">
+      <div class="foto">
+        <span>Espacio para tu foto</span>
+        <img src="portafolio.jpeg" alt="Foto de Luis Angel Vazquez Estrada" onerror="this.remove()">
+      </div>
+
+      <div>
+        <h1>Luis Angel Vazquez Estrada</h1>
+        <p class="titulo">Ingeniero en sistemas computacionales y ciberseguridad</p>
+        <p class="resumen">Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad, con ganas de aprender. En mi tiempo libre hago ejercicio, juego videojuegos y sueño con conocer el mundo.</p>
+      </div>
+    </header>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy Ingeniero en Sistemas Computacionales y Ciberseguridad. Me interesa entender cómo funcionan los sistemas y cómo protegerlos, por eso busco seguir aprendiendo y aplicar lo que sé en proyectos reales. </p>
+      <p>Fuera de la tecnología, me gusta hacer ejercicio, jugar videojuegos y viajar para conocer el mundo. </p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Nombre del proyecto 1</h3>
+          <p>Describir proyectos</p>
+          <a href="#">Ver proyecto</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul class="habilidades">
+        <li>Habilidad </li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <ul class="contacto">
+        <li>Correo: <a href="#">vazquezestradaluis192@gmail.com</a></li>
+        <li>GitHub: <a href="#">luisito2806</a></li>
+  
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">Luis Angel Vazquez Estrada</div>
+  </footer>
+</body>
+</html>
