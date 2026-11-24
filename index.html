@@ -4,215 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luis Angel Vazquez Estrada | Portafolio</title>
-  <meta name="description" content="Portafolio de Luis Angel Vazquez Estrada">
-  <style>
-    :root {
-      --fondo: #f7f5f0;
-      --superficie: #ffffff;
-      --texto: #22252a;
-      --texto-suave: #5c626b;
-      --acento: #1f6f5c;
-      --borde: #dfdbd2;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --fondo: #16191d;
-        --superficie: #1f2329;
-        --texto: #eceae5;
-        --texto-suave: #a3a9b2;
-        --acento: #6cc7ae;
-        --borde: #343a42;
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--fondo);
-      color: var(--texto);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
-    }
-
-    a {
-      color: var(--acento);
-    }
-
-    h1,
-    h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-      line-height: 1.15;
-    }
-
-    .contenedor {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Navegación */
-    nav {
-      border-bottom: 1px solid var(--borde);
-    }
-
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 24px;
-      padding: 16px 0;
-      list-style: none;
-    }
-
-    nav a {
-      color: var(--texto-suave);
-      font-size: 0.95rem;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: var(--acento);
-    }
-
-    
-    .encabezado {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 48px;
-      align-items: center;
-      padding: 64px 0;
-    }
-
-    .foto {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background: var(--superficie);
-      border: 2px dashed var(--borde);
-      border-radius: 8px;
-      color: var(--texto-suave);
-      text-align: center;
-      padding: 16px;
-    }
-
-    .foto img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 3.4rem);
-      margin-bottom: 12px;
-    }
-
-    .titulo {
-      color: var(--acento);
-      font-size: 1.15rem;
-      margin-bottom: 16px;
-    }
-
-    .resumen {
-      color: var(--texto-suave);
-    }
-
-    /* Secciones */
-    section {
-      padding: 40px 0;
-      border-top: 1px solid var(--borde);
-    }
-
-    h2 {
-      font-size: 1.7rem;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      margin-bottom: 6px;
-    }
-
-    p + p {
-      margin-top: 12px;
-    }
-
-    .tarjetas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .tarjeta {
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .tarjeta p {
-      color: var(--texto-suave);
-      font-size: 0.95rem;
-    }
-
-    .tarjeta a {
-      display: inline-block;
-      margin-top: 12px;
-      font-size: 0.95rem;
-    }
-
-    .habilidades {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      list-style: none;
-      padding: 0;
-    }
-
-    .habilidades li {
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-radius: 999px;
-      padding: 4px 14px;
-      font-size: 0.95rem;
-    }
-
-    .contacto {
-      list-style: none;
-      padding: 0;
-    }
-
-    footer {
-      border-top: 1px solid var(--borde);
-      color: var(--texto-suave);
-      font-size: 0.9rem;
-      padding: 24px 0;
-    }
-
-    @media (max-width: 640px) {
-      .encabezado {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 40px 0;
-      }
-
-      .foto {
-        width: 200px;
-      }
-    }
-  </style>
+  <meta name="description" content="Portafolio de Luis Angel Vazquez Estrada: proyectos web, de backend y de escritorio hechos en la UVAQ.">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <nav>
@@ -237,6 +30,11 @@
         <h1>Luis Angel Vazquez Estrada</h1>
         <p class="titulo">Ingeniero en sistemas computacionales y ciberseguridad</p>
         <p class="resumen">Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad, con ganas de aprender. En mi tiempo libre hago ejercicio, juego videojuegos y sueño con conocer el mundo.</p>
+        <ul class="cifras">
+          <li><strong>18</strong><span>proyectos en este portafolio</span></li>
+          <li><strong>4</strong><span>lenguajes: JS, TS, PHP y Java</span></li>
+          <li><strong>1</strong><span>proyecto en equipo para inversionistas</span></li>
+        </ul>
       </div>
     </header>
 
@@ -248,28 +46,456 @@
 
     <section id="proyectos">
       <h2>Proyectos</h2>
+      <p class="intro-seccion">Lo que he construido en la universidad y por mi cuenta: desde sistemas con base de datos que resuelven un problema real hasta juegos y prácticas para aprender una tecnología nueva. Cada proyecto tiene una galería con sus pantallas (116 capturas en total); haz clic en cualquier imagen para abrirla.</p>
+
+      <article class="destacado">
+        <div class="medios">
+          <div class="telefonos">
+            <a class="captura" href="galeria.html?p=offrly#foto-3" aria-label="Ver Offrly en la galería, foto 3">
+              <img src="img/galeria/offrly/03-inicio.webp" alt="Offrly: Inicio del cliente con sus ofertas y trabajos recientes de profesionistas." width="600" height="1298" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=offrly#foto-10" aria-label="Ver Offrly en la galería, foto 10">
+              <img src="img/galeria/offrly/10-negociacion.webp" alt="Offrly: Chat con la línea de avance del trato y el precio de referencia." width="600" height="1298" loading="lazy">
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="etiqueta-equipo">Proyecto en equipo · 4 integrantes</span>
+          <h3>Offrly</h3>
+          <p class="que-es">Plataforma hiperlocal que conecta hogares de Morelia con profesionistas de oficios.</p>
+          <p>Un cliente publica lo que necesita y los electricistas y plomeros cercanos le mandan una oferta. El precio se negocia en un chat con oferta y contraoferta, y al final los dos se califican.</p>
+          <ul class="aportes">
+            <li><strong>Chat de negociación:</strong> rango de precio de referencia, aviso cuando una oferta es demasiado baja, botones − y + de $50 y una línea de 4 pasos con el avance del trato.</li>
+            <li><strong>Publicar una oferta:</strong> horario por franjas, ubicación aproximada, hasta 3 fotos del problema y una pantalla para comparar cotizaciones.</li>
+            <li><strong>Perfil, chats e inicio:</strong> lista de chats tipo WhatsApp con filtros, portafolio del profesionista en cuadrícula y etiqueta “Nuevo” para quien tiene pocas reseñas.</li>
+            <li><strong>Pruebas automáticas:</strong> recorrido completo en Firefox a tamaño de celular (16 de 16 pasando) y arreglé el arranque de las pruebas en Windows.</li>
+            <li><strong>Contenido de la demo:</strong> 45 fotos de perfiles, portafolios y problemas para que todo se vea real.</li>
+            <li>Revisé y uní los pull requests del equipo.</li>
+          </ul>
+          <ul class="tecnologias"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li><li>WebSocket</li><li>Selenium</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=offrly">Ver galería · 16 fotos →</a>
+            <span class="privado">Repositorio privado del equipo</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=minisuper#foto-3" aria-label="Ver Mini Súper en la galería, foto 3">
+            <img src="img/galeria/minisuper/03-venta.webp" alt="Mini Súper: Venta con productos agregados por nombre o código de barras." width="1366" height="820" loading="lazy">
+          </a>
+          <a class="captura" href="galeria.html?p=minisuper#foto-12" aria-label="Ver Mini Súper en la galería, foto 12">
+            <img src="img/galeria/minisuper/12-reportes.webp" alt="Mini Súper: Reporte de ventas con utilidad estimada." width="1366" height="820" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <h3>Mini Súper</h3>
+          <p class="que-es">Punto de venta para una tienda de abarrotes en una zona rural.</p>
+          <p>La tienda vende, cobra y guarda todo en su propia computadora, así que funciona aunque no haya internet. Desde la ciudad el dueño puede revisar la tienda con una USB, con una conexión remota o con un panel en la nube.</p>
+          <ul class="aportes">
+            <li><strong>Ventas y caja:</strong> lector de código de barras, atajos de teclado, apertura y corte de caja, IVA configurable.</li>
+            <li><strong>Inventario y compras:</strong> alertas de productos por agotarse y una lista de compra sugerida según lo que se vendió.</li>
+            <li><strong>Reportes:</strong> utilidad por día, más vendidos, nómina y crédito de trabajadores, exportación a Excel.</li>
+            <li><strong>Pensado para la tienda:</strong> respaldo automático diario, copia a USB e instalador que deja el sistema arrancando solo en Windows.</li>
+            <li>Pruebas automáticas de la API, la base de datos, los cálculos de dinero y la sincronización.</li>
+          </ul>
+          <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>Sequelize</li><li>PostgreSQL</li><li>ExcelJS</li><li>PowerShell</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=minisuper">Ver galería · 14 fotos →</a>
+            <a href="https://github.com/luisito2806/minisuper" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=doo-barber#foto-1" aria-label="Ver Doo Barber en la galería, foto 1">
+            <img src="img/galeria/doo-barber/01-reserva.webp" alt="Doo Barber: Página pública para reservar." width="1366" height="820" loading="lazy">
+          </a>
+          <a class="captura" href="galeria.html?p=doo-barber#foto-7" aria-label="Ver Doo Barber en la galería, foto 7">
+            <img src="img/galeria/doo-barber/06-agenda.webp" alt="Doo Barber: Agenda de la semana con ingresos, citas completadas y pendientes." width="1366" height="820" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <span class="etiqueta-equipo">Proyecto personal</span>
+          <h3>Doo Barber</h3>
+          <p class="que-es">Sistema de citas para barberías, pensado para venderse a varios negocios.</p>
+          <p>El cliente elige servicio, barbero, fecha y hora, y reserva en menos de un minuto sin llamar. El dueño tiene un panel con su agenda, citas sin reserva, bloqueos de horario y reportes. Cada barbería puede poner su propio color y logo.</p>
+          <ul class="aportes">
+            <li><strong>Agenda sin empalmes:</strong> horario semanal, duración de cada servicio y horas bloqueadas; el servidor calcula qué horas quedan libres.</li>
+            <li><strong>Seguridad:</strong> contraseña con hash, sesiones con token, precios que siempre vienen del servidor y protección contra XSS.</li>
+            <li>Avisos por WhatsApp con mensajes precargados.</li>
+            <li>Lo trabajé por secciones, cada una en su propia rama y pull request.</li>
+          </ul>
+          <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>SQLite</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=doo-barber">Ver galería · 11 fotos →</a>
+            <a href="https://github.com/luisito2806/PW" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=duelo-ronin#foto-4" aria-label="Ver Duelo Ronin 1 vs 1 en la galería, foto 4">
+            <img src="img/galeria/duelo-ronin/04-pelea.webp" alt="Duelo Ronin 1 vs 1: Pelea en curso con barras de vida y reloj." width="1366" height="820" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <h3>Duelo Ronin 1 vs 1</h3>
+          <p class="que-es">Juego de pelea en tiempo real para dos jugadores en el navegador.</p>
+          <p>Dos personas entran desde su navegador y pelean a dos rondas con puñetazos, patadas, saltos y bloqueo. El servidor calcula la física y los golpes; los navegadores solo envían teclas.</p>
+          <ul class="aportes">
+            <li><strong>Servidor que manda:</strong> el servidor calcula la física, los golpes y la vida; los navegadores solo envían teclas, así nadie puede hacer trampa.</li>
+            <li><strong>Cupo de 2:</strong> un tercer visitante ve “Duelo lleno”; si alguien se desconecta tiene 10 segundos para volver.</li>
+            <li>Rondas, cuenta regresiva, revancha y modo práctica contra un costal mientras llega el rival.</li>
+            <li>32 pruebas automáticas de la lógica del juego y de la conexión.</li>
+          </ul>
+          <ul class="tecnologias"><li>Node.js</li><li>Socket.IO</li><li>Canvas</li><li>JavaScript</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=duelo-ronin">Ver galería · 6 fotos →</a>
+            <a href="https://github.com/luisito2806/1vs1" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <h3 class="subtitulo-grupo">Backend con PHP y MySQL</h3>
+      <p class="intro-seccion">Sistemas con inicio de sesión, roles y base de datos, hechos para la materia de ambientes web.</p>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=tecnoaula#foto-2" aria-label="Ver TecnoAula en la galería, foto 2">
+            <img src="img/galeria/tecnoaula/03-admin-dashboard.webp" alt="TecnoAula: Administrador: resumen de usuarios, cursos, inscripciones y entregas." width="1366" height="820" loading="lazy">
+          </a>
+          <a class="captura" href="galeria.html?p=tecnoaula#foto-14" aria-label="Ver TecnoAula en la galería, foto 14">
+            <img src="img/galeria/tecnoaula/15-alumno-curso.webp" alt="TecnoAula: Alumno: contenido del curso y próximas tareas." width="1366" height="820" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <h3>TecnoAula</h3>
+          <p class="que-es">Plataforma escolar con un panel distinto para cada rol.</p>
+          <p>Administrador, director, docente y alumno entran a su propio panel. Los cursos se organizan en bloques y temas; el alumno ve su avance, entrega tareas, consulta su calendario y sus calificaciones, y participa en foros y chat.</p>
+          <ul class="aportes">
+            <li><strong>Acceso seguro:</strong> “Recordarme”, límite de intentos fallidos y recuperación de contraseña con token.</li>
+            <li><strong>Roles y permisos:</strong> un rol principal más roles y permisos adicionales por usuario.</li>
+            <li><strong>Cursos completos:</strong> bloques, temas, materiales, tareas, foros y chat por curso, con el avance de cada alumno.</li>
+            <li>Reportes de avance y calificaciones por curso.</li>
+            <li>Las credenciales de la base de datos quedan fuera del repositorio.</li>
+          </ul>
+          <ul class="tecnologias"><li>PHP</li><li>MySQL</li><li>PDO</li><li>JavaScript</li><li>CSS</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=tecnoaula">Ver galería · 21 fotos →</a>
+            <a href="https://github.com/luisito2806/TecnoAula" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=calificaciones#foto-3" aria-label="Ver Portal de calificaciones en la galería, foto 3">
+            <img src="img/galeria/calificaciones/03-panel.webp" alt="Portal de calificaciones: Panel del alumno con sus datos y calificaciones." width="1366" height="820" loading="lazy">
+          </a>
+          <a class="captura" href="galeria.html?p=calificaciones#foto-4" aria-label="Ver Portal de calificaciones en la galería, foto 4">
+            <img src="img/galeria/calificaciones/04-todas-las-calificaciones.webp" alt="Portal de calificaciones: Lista general de calificaciones." width="1240" height="420" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <h3>Portal de calificaciones</h3>
+          <p class="que-es">Portal donde cada alumno se registra y consulta sus calificaciones.</p>
+          <p>El alumno crea su cuenta con su número de control, inicia sesión y ve sus calificaciones por materia.</p>
+          <ul class="aportes">
+            <li>Registro e inicio de sesión con sesiones de PHP.</li>
+            <li>Contraseñas guardadas con hash (password_hash y password_verify).</li>
+            <li>Consultas preparadas para evitar inyección SQL.</li>
+            <li>Panel del alumno con sus datos y la tabla de calificaciones.</li>
+          </ul>
+          <ul class="tecnologias"><li>PHP</li><li>MySQL</li><li>Sesiones</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=calificaciones">Ver galería · 4 fotos →</a>
+            <a href="https://github.com/luisito2806/Ambientes-web" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=pokedex#foto-1" aria-label="Ver Pokédex en la galería, foto 1">
+            <img src="img/galeria/pokedex/01-charizard.webp" alt="Pokédex: Búsqueda de Charizard." width="1366" height="820" loading="lazy">
+          </a>
+          <a class="captura" href="galeria.html?p=pokedex#foto-3" aria-label="Ver Pokédex en la galería, foto 3">
+            <img src="img/galeria/pokedex/03-catalogo.webp" alt="Pokédex: Catálogo para elegir un Pokémon." width="1366" height="820" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <h3>Pokédex</h3>
+          <p class="que-es">Buscador de Pokémon que consulta la PokéAPI desde el servidor.</p>
+          <p>Se busca un Pokémon por nombre o número y el servidor trae sus datos de la PokéAPI. Abajo hay un catálogo para elegirlos a mano.</p>
+          <ul class="aportes">
+            <li>Consumo de una API externa desde PHP, sin exponerla al navegador.</li>
+            <li>Sprites normal y shiny, tipos, altura, peso y habilidades.</li>
+            <li>Estadísticas base con barras de colores.</li>
+            <li>Catálogo de los primeros Pokémon para elegir sin escribir.</li>
+          </ul>
+          <ul class="tecnologias"><li>PHP</li><li>API REST</li><li>CSS</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=pokedex">Ver galería · 5 fotos →</a>
+            <a href="https://github.com/luisito2806/Pokedex" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="destacado">
+        <div class="medios">
+          <a class="captura" href="galeria.html?p=catalogo#foto-2" aria-label="Ver Catálogo con carrito en la galería, foto 2">
+            <img src="img/galeria/catalogo/02-resumen-con-descuento.webp" alt="Catálogo con carrito: Resumen de una compra con descuento." width="1040" height="580" loading="lazy">
+          </a>
+          <a class="captura" href="galeria.html?p=catalogo#foto-1" aria-label="Ver Catálogo con carrito en la galería, foto 1">
+            <img src="img/galeria/catalogo/01-formulario.webp" alt="Catálogo con carrito: Formulario con el catálogo." width="1400" height="1032" loading="lazy">
+          </a>
+        </div>
+        <div>
+          <h3>Catálogo con carrito</h3>
+          <p class="que-es">Catálogo de electrónica donde el servidor calcula el total de la compra.</p>
+          <p>El cliente escribe su nombre, marca productos y el servidor calcula el total a partir del formulario.</p>
+          <ul class="aportes">
+            <li>Catálogo generado con un arreglo de PHP.</li>
+            <li>Validación del nombre y de que haya productos elegidos.</li>
+            <li>Subtotal, 10 % de descuento en compras de más de $500 y total a pagar.</li>
+          </ul>
+          <ul class="tecnologias"><li>PHP</li><li>HTML</li><li>Formularios GET</li></ul>
+          <div class="enlaces">
+            <a class="ver-galeria" href="galeria.html?p=catalogo">Ver galería · 3 fotos →</a>
+            <a href="https://github.com/luisito2806/PHP-formulario" target="_blank" rel="noopener">Código en GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <h3 class="subtitulo-grupo">Aplicaciones web y juegos</h3>
+      <p class="intro-seccion">Proyectos más cortos para practicar JavaScript, APIs y tiempo real.</p>
+
       <div class="tarjetas">
         <article class="tarjeta">
-          <h3>Nombre del proyecto 1</h3>
-          <p>Describir proyectos</p>
-          <a href="#">Ver proyecto</a>
+          <a class="captura" href="galeria.html?p=chat-socket#foto-2" aria-label="Ver Chat en tiempo real en la galería, foto 2">
+            <img src="img/galeria/chat-socket/02-conversacion.webp" alt="Chat en tiempo real: Conversación entre tres personas." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Chat en tiempo real</h3>
+            <p>Chat donde cada persona entra con su nombre y recibe un color. Muestra quién está conectado y avisa cuando alguien entra o sale. Los mensajes se limpian y se limitan en el servidor.</p>
+            <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>Socket.IO</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=chat-socket">Ver galería · 3 fotos →</a>
+              <a href="https://github.com/luisito2806/socket" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=lightship-weather#foto-1" aria-label="Ver Lightship Weather en la galería, foto 1">
+            <img src="img/galeria/lightship-weather/01-mexico.webp" alt="Lightship Weather: Ciudad de México." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Lightship Weather</h3>
+            <p>API de clima que lee la información de cada ciudad desde archivos Markdown. El servidor con Express expone /api/clima/:ciudad y la página lo consume para mostrar el clima de cada ciudad con tarjetas.</p>
+            <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>API REST</li><li>Tailwind CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=lightship-weather">Ver galería · 5 fotos →</a>
+              <a href="https://github.com/luisito2806/IA-clima-" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=duomath#foto-1" aria-label="Ver DuoMath en la galería, foto 1">
+            <img src="img/galeria/duomath/01-ruta.webp" alt="DuoMath: Ruta de módulos." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>DuoMath</h3>
+            <p>Plataforma para practicar matemáticas de 6.º de primaria. Inspirada en las apps de idiomas: lecciones de 20 preguntas por módulo, con puntos de experiencia, coronas y vidas.</p>
+            <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=duomath">Ver galería · 5 fotos →</a>
+              <a class="ver-vivo" href="https://luisito2806.github.io/duolingo-matematico/" target="_blank" rel="noopener">Ver en vivo →</a>
+              <a href="https://github.com/luisito2806/duolingo-matematico" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=bio-terminal#foto-3" aria-label="Ver Bio-Terminal en la galería, foto 3">
+            <img src="img/galeria/bio-terminal/03-desgaste.webp" alt="Bio-Terminal: Las barras bajan con el tiempo y aparecen alertas." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Bio-Terminal</h3>
+            <p>Mascota virtual con estética de terminal. Hay que mantenerla viva 24 horas simuladas (1 hora = 6 segundos) alimentándola, jugando y limpiándola. Tiene tres niveles de dificultad.</p>
+            <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=bio-terminal">Ver galería · 4 fotos →</a>
+              <a class="ver-vivo" href="https://luisito2806.github.io/Tamagotchi-web/" target="_blank" rel="noopener">Ver en vivo →</a>
+              <a href="https://github.com/luisito2806/Tamagotchi-web" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=reproductor#foto-3" aria-label="Ver Reproductor de música en la galería, foto 3">
+            <img src="img/galeria/reproductor/03-reproduciendo.webp" alt="Reproductor de música: Reproduciendo con canciones marcadas como favoritas." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Reproductor de música</h3>
+            <p>Reproductor con cuentas de usuario y canciones favoritas. Lista de canciones, aleatorio, repetir, barra de avance y volumen. Cada usuario inicia sesión y guarda sus favoritas en el navegador.</p>
+            <ul class="tecnologias"><li>JavaScript</li><li>Audio API</li><li>localStorage</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=reproductor">Ver galería · 4 fotos →</a>
+              <a href="https://github.com/luisito2806/reproductor-musica" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=pong#foto-2" aria-label="Ver Pong vs Pared en la galería, foto 2">
+            <img src="img/galeria/pong/02-partida.webp" alt="Pong vs Pared: Partida en curso." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Pong vs Pared</h3>
+            <p>Pong de un jugador contra la pared. Se eligen teclas, colores, puntos por golpe y velocidad. Cada 5 golpes sube el nivel, y se guardan los 3 mejores resultados.</p>
+            <ul class="tecnologias"><li>JavaScript</li><li>Canvas</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=pong">Ver galería · 3 fotos →</a>
+              <a class="ver-vivo" href="https://luisito2806.github.io/Pingpon/" target="_blank" rel="noopener">Ver en vivo →</a>
+              <a href="https://github.com/luisito2806/Pingpon" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=cotizador#foto-2" aria-label="Ver Cotizador web en la galería, foto 2">
+            <img src="img/galeria/cotizador/02-cotizacion.webp" alt="Cotizador web: Cotización con el desglose y el IVA." width="1280" height="800" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Cotizador web</h3>
+            <p>Calcula cuánto cuesta un sitio web. Según el número de páginas y los servicios extra (dominio, hosting, base de datos, SEO). Acepta cupones de descuento y muestra el desglose con IVA.</p>
+            <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=cotizador">Ver galería · 3 fotos →</a>
+              <a class="ver-vivo" href="https://luisito2806.github.io/nav-bars/cotizador-web/" target="_blank" rel="noopener">Ver en vivo →</a>
+              <a href="https://github.com/luisito2806/nav-bars" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subtitulo-grupo">Java y otras prácticas</h3>
+      <p class="intro-seccion">Programas de escritorio en Java, estructuras de datos y prácticas cortas.</p>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="par">
+            <a class="captura" href="galeria.html?p=estructuras-datos#foto-3" aria-label="Ver Estructuras de datos en la galería, foto 3">
+              <img src="img/galeria/estructuras-datos/03-laberinto-nivel-3.webp" alt="Estructuras de datos: Laberinto, nivel 3, resuelto." width="506" height="613" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=estructuras-datos#foto-5" aria-label="Ver Estructuras de datos en la galería, foto 5">
+              <img src="img/galeria/estructuras-datos/05-playlist.webp" alt="Estructuras de datos: App de playlists reproduciendo una canción." width="486" height="563" loading="lazy">
+            </a>
+          </div>
+          <div class="cuerpo">
+            <h3>Estructuras de datos</h3>
+            <p>Programas de escritorio en Java para la materia de estructuras de datos. Un laberinto de 10×10 que se resuelve solo con backtracking recursivo y se ve paso a paso: el camino encontrado queda en verde. También una app de playlists hecha con una lista circular doblemente enlazada.</p>
+            <ul class="tecnologias"><li>Java</li><li>Swing</li><li>Listas enlazadas</li><li>Recursividad</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=estructuras-datos">Ver galería · 5 fotos →</a>
+              <span class="privado">Repositorio privado</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=poo#foto-1" aria-label="Ver Programación orientada a objetos en la galería, foto 1">
+            <img src="img/galeria/poo/01-renta-de-vehiculos.webp" alt="Programación orientada a objetos: Renta de vehículos: registrar un auto y una moto, ver su información y calcular la renta." width="1400" height="875" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Programación orientada a objetos</h3>
+            <p>Prácticas de consola en Java. Herencia, clases abstractas y polimorfismo. Cada práctica la entregué en su propia rama con un pull request que revisó el profesor. Las capturas son ejecuciones reales con datos de ejemplo; en verde, lo que escribe el usuario.</p>
+            <ul class="tecnologias"><li>Java</li><li>POO</li><li>Git</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=poo">Ver galería · 2 fotos →</a>
+              <span class="privado">Repositorio privado</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <a class="captura" href="galeria.html?p=lista-tareas#foto-2" aria-label="Ver Lista de tareas en la galería, foto 2">
+            <img src="img/galeria/lista-tareas/02-despues-de-recargar.webp" alt="Lista de tareas: Las tareas siguen ahí después de recargar, con dos completadas." width="1120" height="460" loading="lazy">
+          </a>
+          <div class="cuerpo">
+            <h3>Lista de tareas</h3>
+            <p>Lista de tareas que se guarda en el navegador. Agregar, marcar como hecha y borrar, sin perder nada al recargar la página.</p>
+            <ul class="tecnologias"><li>JavaScript</li><li>localStorage</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=lista-tareas">Ver galería · 2 fotos →</a>
+              <a class="ver-vivo" href="https://luisito2806.github.io/localstorage/" target="_blank" rel="noopener">Ver en vivo →</a>
+              <a href="https://github.com/luisito2806/localstorage" target="_blank" rel="noopener">Código →</a>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="habilidades">
       <h2>Habilidades</h2>
-      <ul class="habilidades">
-        <li>Habilidad </li>
-      </ul>
+      <p class="intro-seccion">Las tecnologías que he usado en los proyectos de arriba.</p>
+      <div class="grupos-habilidades">
+        <div>
+          <h3>Frontend</h3>
+          <ul class="habilidades">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Tailwind CSS</li>
+            <li>Canvas</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <ul class="habilidades">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Socket.IO</li>
+            <li>WebSocket</li>
+            <li>PHP</li>
+            <li>APIs REST</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Bases de datos</h3>
+          <ul class="habilidades">
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>Sequelize</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Otros</h3>
+          <ul class="habilidades">
+            <li>Java</li>
+            <li>Git y GitHub</li>
+            <li>Pruebas automáticas</li>
+            <li>Seguridad web</li>
+            <li>Trabajo en equipo</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
       <ul class="contacto">
-        <li>Correo: <a href="#">vazquezestradaluis192@gmail.com</a></li>
-        <li>GitHub: <a href="#">luisito2806</a></li>
-  
+        <li>Correo: <a href="mailto:vazquezestradaluis192@gmail.com">vazquezestradaluis192@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/luisito2806" target="_blank" rel="noopener">luisito2806</a></li>
       </ul>
     </section>
   </main>
