@@ -245,6 +245,8 @@ module.exports = [
   },
   {
     slug: 'chat-socket',
+    demo: 'https://chat-tiempo-real-zwkv.onrender.com/',
+    demoNota: 'Ábrelo en dos pestañas o comparte el enlace para chatear. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.',
     titulo: 'Chat en tiempo real',
     queEs: 'Chat donde cada persona entra con su nombre y recibe un color.',
     descripcion: ['Muestra quién está conectado y avisa cuando alguien entra o sale. Los mensajes se limpian y se limitan en el servidor.'],

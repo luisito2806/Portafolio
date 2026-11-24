@@ -210,6 +210,7 @@ module.exports = {
   },
 
   'chat-socket': {
+    demoNota: 'Open it in two tabs or share the link to chat. It runs on a free server, so it may take about a minute to wake up.',
     queEs: 'Chat where each person joins with a name and gets a color.',
     descripcion: ['Shows who is online and announces when someone joins or leaves. Messages are cleaned and length-limited on the server.'],
     fotos: {

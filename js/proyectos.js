@@ -857,6 +857,8 @@ window.PROYECTOS = {
     "Socket.IO"
    ],
    "repo": "https://github.com/luisito2806/socket",
+   "demo": "https://chat-tiempo-real-zwkv.onrender.com/",
+   "demoNota": "Ábrelo en dos pestañas o comparte el enlace para chatear. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
    "fotos": [
     {
      "archivo": "01-entrada",
@@ -2159,6 +2161,8 @@ window.PROYECTOS = {
     "Socket.IO"
    ],
    "repo": "https://github.com/luisito2806/socket",
+   "demo": "https://chat-tiempo-real-zwkv.onrender.com/",
+   "demoNota": "Open it in two tabs or share the link to chat. It runs on a free server, so it may take about a minute to wake up.",
    "fotos": [
     {
      "archivo": "01-entrada",
