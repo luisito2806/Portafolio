@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luis Angel Vazquez Estrada | Portfolio</title>
+  <meta name="description" content="Computer Systems and Cybersecurity Engineering student at UVAQ. I build database-driven systems, real-time apps and games, taking care of security from the login screen to the database.">
+  <link rel="icon" href="../img/icono.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icono-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../img/icono-180.png">
+  <link rel="canonical" href="https://luisito2806.github.io/Portafolio/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Luis Angel Vazquez Estrada">
+  <meta property="og:title" content="Luis Angel Vazquez Estrada | Portfolio">
+  <meta property="og:description" content="Computer Systems and Cybersecurity Engineering student at UVAQ. I build database-driven systems, real-time apps and games, taking care of security from the login screen to the database.">
+  <meta property="og:url" content="https://luisito2806.github.io/Portafolio/en/">
+  <meta property="og:image" content="https://luisito2806.github.io/Portafolio/img/vista-previa-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luis Angel Vazquez Estrada: Computer Systems and Cybersecurity Engineering student">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>(function(){try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-tema',t);}catch(e){}})();</script>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="alternate" hreflang="es" href="../">
+</head>
+<body>
+  <nav class="barra">
+    <div class="contenedor barra-interior">
+      <ul class="menu">
+        <li><a href="#sobre-mi">About</a></li>
+        <li><a href="#proyectos">Projects</a></li>
+        <li><a href="#seguridad">Security</a></li>
+        <li><a href="#formacion">Education</a></li>
+        <li><a href="#habilidades">Skills</a></li>
+        <li><a href="#contacto">Contact</a></li>
+      </ul>
+      <div class="acciones-barra">
+        <a class="cambiar-idioma" href="../" hreflang="es" lang="es" title="Español">ES</a>
+        <button type="button" class="cambiar-tema" id="cambiar-tema" aria-label="Toggle light and dark mode" title="Toggle light and dark mode">
+          <svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contenedor">
+    <header class="encabezado" id="inicio">
+      <div class="foto">
+        <img src="../portafolio.jpeg" alt="Luis Angel Vazquez Estrada" width="480" height="600" onerror="this.parentElement.classList.add('sin-foto');this.remove()">
+      </div>
+
+      <div class="presentacion">
+        <p class="kicker"><span aria-hidden="true">&gt;_</span> Computer Systems and Cybersecurity Engineering student</p>
+        <h1>Luis Angel Vazquez Estrada</h1>
+        <p class="lema">I build complete web systems and make sure they are secure.</p>
+        <p class="resumen">Computer Systems and Cybersecurity Engineering student at UVAQ. I build database-driven systems, real-time apps and games, taking care of security from the login screen to the database.</p>
+        <div class="botones">
+          <a class="boton principal" href="#proyectos">See projects</a>
+          <a class="boton" href="cv.pdf" download="Resume-Luis-Angel-Vazquez-Estrada.pdf">Download CV</a>
+          <a class="boton" href="#contacto">Contact</a>
+        </div>
+        <ul class="cifras">
+          <li><strong>18</strong><span>projects</span></li>
+          <li><strong>116</strong><span>screenshots, each explained</span></li>
+          <li><strong>5</strong><span>live projects</span></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="sobre-mi">
+      <h2>About me</h2>
+      <p>I'm a Computer Systems and Cybersecurity Engineering student. I like understanding how systems work and how to protect them, so I keep learning and applying what I know to real projects.</p>
+      <p>Outside of tech, I enjoy working out, playing video games and traveling to see the world.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Projects</h2>
+      <p class="intro-seccion">What I've built at university and on my own: from database-driven systems that solve a real problem to games and exercises for learning a new technology. Each project has a gallery of its screens and how each one works (116 screenshots in total).</p>
+
+      <div class="filtros" role="group" aria-label="Filter projects by technology">
+          <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">All <span>18</span></button>
+          <button type="button" class="filtro" data-filtro="javascript" aria-pressed="false">JavaScript <span>13</span></button>
+          <button type="button" class="filtro" data-filtro="node" aria-pressed="false">Node.js <span>5</span></button>
+          <button type="button" class="filtro" data-filtro="php" aria-pressed="false">PHP <span>4</span></button>
+          <button type="button" class="filtro" data-filtro="java" aria-pressed="false">Java <span>2</span></button>
+          <button type="button" class="filtro" data-filtro="bd" aria-pressed="false">Databases <span>4</span></button>
+          <button type="button" class="filtro" data-filtro="tiempo-real" aria-pressed="false">Real time <span>3</span></button>
+          <button type="button" class="filtro" data-filtro="en-vivo" aria-pressed="false">Live <span>5</span></button>
+      </div>
+
+      <div class="grupo-proyectos">
+        <h3 class="subtitulo-grupo">Main projects</h3>
+        <p class="intro-seccion">Complete systems, end to end.</p>
+        <article class="destacado" data-etiquetas="javascript tiempo-real">
+          <div class="medios">
+            <div class="telefonos">
+              <a class="captura" href="galeria.html?p=offrly#foto-3" aria-label="See Offrly in the gallery, photo 3">
+                <img src="../img/galeria/offrly/03-inicio.webp" alt="Offrly: Client home with their requests and tradespeople's recent work." width="600" height="1298" loading="lazy">
+              </a>
+              <a class="captura" href="galeria.html?p=offrly#foto-10" aria-label="See Offrly in the gallery, photo 10">
+                <img src="../img/galeria/offrly/10-negociacion.webp" alt="Offrly: Chat with the deal progress line and the reference price." width="600" height="1298" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div>
+            <span class="etiqueta-equipo">Team project · 4 members</span>
+            <h3>Offrly</h3>
+            <p class="que-es">Hyperlocal platform that connects households in Morelia with tradespeople.</p>
+            <p>A client posts what they need and nearby electricians and plumbers send an offer. The price is negotiated in a chat with offers and counteroffers, and at the end both sides rate each other.</p>
+            <ul class="aportes">
+              <li><strong>Negotiation chat:</strong> reference price range, warning when an offer is too low, − and + buttons in $50 steps, and a 4-step progress line for the deal.</li>
+              <li><strong>Posting a request:</strong> time slots, approximate location, up to 3 photos of the problem and a screen to compare quotes.</li>
+              <li><strong>Profile, chats and home:</strong> WhatsApp-style chat list with filters, a grid portfolio for tradespeople and a “New” badge for those with few reviews.</li>
+              <li><strong>Automated tests:</strong> full walkthrough in Firefox at phone size (16 of 16 passing), and I fixed the test runner on Windows.</li>
+              <li><strong>Demo content:</strong> 45 photos of profiles, portfolios and problems so everything looks real.</li>
+              <li>I reviewed and merged the team's pull requests.</li>
+            </ul>
+            <ul class="tecnologias"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li><li>WebSocket</li><li>Selenium</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=offrly">See gallery · 16 photos →</a>
+              <span class="privado">Private team repository</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="destacado" data-etiquetas="node javascript bd">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=minisuper#foto-3" aria-label="See Mini Súper in the gallery, photo 3">
+              <img src="../img/galeria/minisuper/03-venta.webp" alt="Mini Súper: A sale with products added by name or barcode." width="1366" height="820" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=minisuper#foto-12" aria-label="See Mini Súper in the gallery, photo 12">
+              <img src="../img/galeria/minisuper/12-reportes.webp" alt="Mini Súper: Sales report with estimated profit." width="1366" height="820" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <h3>Mini Súper</h3>
+            <p class="que-es">Point-of-sale system for a small grocery store in a rural area.</p>
+            <p>The store sells, charges and stores everything on its own computer, so it works without internet. From the city, the owner can check the store with a USB drive, a remote connection or a cloud dashboard.</p>
+            <ul class="aportes">
+              <li><strong>Sales and cash register:</strong> barcode scanner, keyboard shortcuts, opening and closing the register, configurable VAT.</li>
+              <li><strong>Inventory and purchasing:</strong> low-stock alerts and a suggested shopping list based on what sold.</li>
+              <li><strong>Reports:</strong> daily profit, best sellers, payroll and worker credit, Excel export.</li>
+              <li><strong>Built for the store:</strong> automatic daily backup, USB copy and an installer that makes the system start on its own on Windows.</li>
+              <li>Automated tests for the API, the database, money calculations and syncing.</li>
+            </ul>
+            <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>Sequelize</li><li>PostgreSQL</li><li>ExcelJS</li><li>PowerShell</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=minisuper">See gallery · 14 photos →</a>
+              <a href="https://github.com/luisito2806/minisuper" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destacado" data-etiquetas="node javascript bd">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=doo-barber#foto-1" aria-label="See Doo Barber in the gallery, photo 1">
+              <img src="../img/galeria/doo-barber/01-reserva.webp" alt="Doo Barber: Public booking page." width="1366" height="820" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=doo-barber#foto-7" aria-label="See Doo Barber in the gallery, photo 7">
+              <img src="../img/galeria/doo-barber/06-agenda.webp" alt="Doo Barber: Weekly schedule with income, completed and pending appointments." width="1366" height="820" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <span class="etiqueta-equipo">Personal project</span>
+            <h3>Doo Barber</h3>
+            <p class="que-es">Appointment system for barbershops, designed to be sold to several businesses.</p>
+            <p>Clients choose a service, barber, date and time, and book in under a minute without calling. The owner gets a dashboard with the schedule, walk-ins, blocked hours and reports. Each barbershop can set its own color and logo.</p>
+            <ul class="aportes">
+              <li><strong>No double-booking:</strong> weekly hours, service duration and blocked hours; the server works out which times are free.</li>
+              <li><strong>Security:</strong> hashed password, token sessions, prices that always come from the server and XSS protection.</li>
+              <li>WhatsApp notifications with prefilled messages.</li>
+              <li>I worked section by section, each on its own branch and pull request.</li>
+            </ul>
+            <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>SQLite</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=doo-barber">See gallery · 11 photos →</a>
+              <a href="https://github.com/luisito2806/PW" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destacado" data-etiquetas="node javascript tiempo-real">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=duelo-ronin#foto-4" aria-label="See Duelo Ronin 1 vs 1 in the gallery, photo 4">
+              <img src="../img/galeria/duelo-ronin/04-pelea.webp" alt="Duelo Ronin 1 vs 1: Fight in progress with health bars and timer." width="1366" height="820" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <h3>Duelo Ronin 1 vs 1</h3>
+            <p class="que-es">Real-time two-player fighting game in the browser.</p>
+            <p>Two people join from their browsers and fight two rounds with punches, kicks, jumps and blocks. The server simulates physics and hits; browsers only send key presses.</p>
+            <ul class="aportes">
+              <li><strong>Authoritative server:</strong> it computes physics, hits and health; browsers only send keys, so nobody can cheat.</li>
+              <li><strong>Capped at 2:</strong> a third visitor sees “Duel full”; if someone disconnects they have 10 seconds to return.</li>
+              <li>Rounds, countdown, rematch and a practice mode against a punching bag while the opponent arrives.</li>
+              <li>32 automated tests for the game logic and networking.</li>
+            </ul>
+            <ul class="tecnologias"><li>Node.js</li><li>Socket.IO</li><li>Canvas</li><li>JavaScript</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=duelo-ronin">See gallery · 6 photos →</a>
+              <a href="https://github.com/luisito2806/1vs1" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="grupo-proyectos">
+        <h3 class="subtitulo-grupo">Backend with PHP and MySQL</h3>
+        <p class="intro-seccion">Systems with sign-in, roles and a database, built for the web development course.</p>
+        <article class="destacado" data-etiquetas="php bd javascript">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=tecnoaula#foto-2" aria-label="See TecnoAula in the gallery, photo 2">
+              <img src="../img/galeria/tecnoaula/03-admin-dashboard.webp" alt="TecnoAula: Admin: overview of users, courses, enrollments and submissions." width="1366" height="820" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=tecnoaula#foto-14" aria-label="See TecnoAula in the gallery, photo 14">
+              <img src="../img/galeria/tecnoaula/15-alumno-curso.webp" alt="TecnoAula: Student: course content and upcoming assignments." width="1366" height="820" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <h3>TecnoAula</h3>
+            <p class="que-es">School platform with a different dashboard for each role.</p>
+            <p>Admins, directors, teachers and students each get their own dashboard. Courses are organized in blocks and topics; students see their progress, submit assignments, check their calendar and grades, and take part in forums and chat.</p>
+            <ul class="aportes">
+              <li><strong>Secure sign-in:</strong> “Remember me”, failed-attempt limits and token-based password reset.</li>
+              <li><strong>Roles and permissions:</strong> a main role plus extra roles and permissions per user.</li>
+              <li><strong>Full courses:</strong> blocks, topics, materials, assignments, forums and per-course chat, with each student’s progress.</li>
+              <li>Progress and grade reports per course.</li>
+              <li>Database credentials are kept out of the repository.</li>
+            </ul>
+            <ul class="tecnologias"><li>PHP</li><li>MySQL</li><li>PDO</li><li>JavaScript</li><li>CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=tecnoaula">See gallery · 21 photos →</a>
+              <a href="https://github.com/luisito2806/TecnoAula" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destacado" data-etiquetas="php bd">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=calificaciones#foto-3" aria-label="See Portal de calificaciones in the gallery, photo 3">
+              <img src="../img/galeria/calificaciones/03-panel.webp" alt="Portal de calificaciones: Student dashboard with details and grades." width="1366" height="820" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=calificaciones#foto-4" aria-label="See Portal de calificaciones in the gallery, photo 4">
+              <img src="../img/galeria/calificaciones/04-todas-las-calificaciones.webp" alt="Portal de calificaciones: General list of grades." width="1240" height="420" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <h3>Portal de calificaciones</h3>
+            <p class="que-es">Portal where each student signs up and checks their grades.</p>
+            <p>Students create an account with their student ID, sign in and see their grades by subject.</p>
+            <ul class="aportes">
+              <li>Sign-up and sign-in with PHP sessions.</li>
+              <li>Passwords stored as hashes (password_hash and password_verify).</li>
+              <li>Prepared statements to prevent SQL injection.</li>
+              <li>Student dashboard with their details and grade table.</li>
+            </ul>
+            <ul class="tecnologias"><li>PHP</li><li>MySQL</li><li>Sesiones</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=calificaciones">See gallery · 4 photos →</a>
+              <a href="https://github.com/luisito2806/Ambientes-web" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destacado" data-etiquetas="php">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=pokedex#foto-1" aria-label="See Pokédex in the gallery, photo 1">
+              <img src="../img/galeria/pokedex/01-charizard.webp" alt="Pokédex: Searching for Charizard." width="1366" height="820" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=pokedex#foto-3" aria-label="See Pokédex in the gallery, photo 3">
+              <img src="../img/galeria/pokedex/03-catalogo.webp" alt="Pokédex: Catalog to pick a Pokémon." width="1366" height="820" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <h3>Pokédex</h3>
+            <p class="que-es">Pokémon search that queries the PokéAPI from the server.</p>
+            <p>Search a Pokémon by name or number and the server fetches its data from the PokéAPI. Below there is a catalog to pick them by hand.</p>
+            <ul class="aportes">
+              <li>Calling an external API from PHP, without exposing it to the browser.</li>
+              <li>Normal and shiny sprites, types, height, weight and abilities.</li>
+              <li>Base stats as colored bars.</li>
+              <li>Catalog of the first Pokémon to pick without typing.</li>
+            </ul>
+            <ul class="tecnologias"><li>PHP</li><li>API REST</li><li>CSS</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=pokedex">See gallery · 5 photos →</a>
+              <a href="https://github.com/luisito2806/Pokedex" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="destacado" data-etiquetas="php">
+          <div class="medios">
+            <a class="captura" href="galeria.html?p=catalogo#foto-2" aria-label="See Catálogo con carrito in the gallery, photo 2">
+              <img src="../img/galeria/catalogo/02-resumen-con-descuento.webp" alt="Catálogo con carrito: Summary of a purchase with a discount." width="1040" height="580" loading="lazy">
+            </a>
+            <a class="captura" href="galeria.html?p=catalogo#foto-1" aria-label="See Catálogo con carrito in the gallery, photo 1">
+              <img src="../img/galeria/catalogo/01-formulario.webp" alt="Catálogo con carrito: Form with the catalog." width="1400" height="1032" loading="lazy">
+            </a>
+          </div>
+          <div>
+            <h3>Catálogo con carrito</h3>
+            <p class="que-es">Electronics catalog where the server calculates the purchase total.</p>
+            <p>The client enters their name, ticks products and the server calculates the total from the form.</p>
+            <ul class="aportes">
+              <li>Catalog generated from a PHP array.</li>
+              <li>Validates the name and that at least one product was chosen.</li>
+              <li>Subtotal, 10 % discount on purchases over $500, and total to pay.</li>
+            </ul>
+            <ul class="tecnologias"><li>PHP</li><li>HTML</li><li>Formularios GET</li></ul>
+            <div class="enlaces">
+              <a class="ver-galeria" href="galeria.html?p=catalogo">See gallery · 3 photos →</a>
+              <a href="https://github.com/luisito2806/PHP-formulario" target="_blank" rel="noopener">Code on GitHub →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="grupo-proyectos">
+        <h3 class="subtitulo-grupo">Web apps and games</h3>
+        <p class="intro-seccion">Shorter projects to practice JavaScript, APIs and real-time features.</p>
+        <div class="tarjetas">
+          <article class="tarjeta" data-etiquetas="node javascript tiempo-real">
+            <a class="captura" href="galeria.html?p=chat-socket#foto-2" aria-label="See Chat en tiempo real in the gallery, photo 2">
+              <img src="../img/galeria/chat-socket/02-conversacion.webp" alt="Chat en tiempo real: A conversation between three people." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Chat en tiempo real</h3>
+              <p>Chat where each person joins with a name and gets a color. Shows who is online and announces when someone joins or leaves. Messages are cleaned and length-limited on the server.</p>
+              <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>Socket.IO</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=chat-socket">See gallery · 3 photos →</a>
+                <a href="https://github.com/luisito2806/socket" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="node javascript">
+            <a class="captura" href="galeria.html?p=lightship-weather#foto-1" aria-label="See Lightship Weather in the gallery, photo 1">
+              <img src="../img/galeria/lightship-weather/01-mexico.webp" alt="Lightship Weather: Mexico City." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Lightship Weather</h3>
+              <p>Weather API that reads each city’s data from Markdown files. The Express server exposes /api/clima/:ciudad and the page consumes it to show each city’s weather as cards.</p>
+              <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>API REST</li><li>Tailwind CSS</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=lightship-weather">See gallery · 5 photos →</a>
+                <a href="https://github.com/luisito2806/IA-clima-" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="javascript en-vivo">
+            <a class="captura" href="galeria.html?p=duomath#foto-1" aria-label="See DuoMath in the gallery, photo 1">
+              <img src="../img/galeria/duomath/01-ruta.webp" alt="DuoMath: Module path." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>DuoMath</h3>
+              <p>Platform to practice 6th-grade math. Inspired by language-learning apps: 20-question lessons per module, with experience points, crowns and lives.</p>
+              <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=duomath">See gallery · 5 photos →</a>
+                <a class="ver-vivo" href="https://luisito2806.github.io/duolingo-matematico/" target="_blank" rel="noopener">See it live →</a>
+                <a href="https://github.com/luisito2806/duolingo-matematico" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="javascript en-vivo">
+            <a class="captura" href="galeria.html?p=bio-terminal#foto-3" aria-label="See Bio-Terminal in the gallery, photo 3">
+              <img src="../img/galeria/bio-terminal/03-desgaste.webp" alt="Bio-Terminal: Bars drop over time and alerts appear." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Bio-Terminal</h3>
+              <p>Virtual pet with a terminal look. You have to keep it alive for 24 simulated hours (1 hour = 6 seconds) by feeding, playing and cleaning. It has three difficulty levels.</p>
+              <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=bio-terminal">See gallery · 4 photos →</a>
+                <a class="ver-vivo" href="https://luisito2806.github.io/Tamagotchi-web/" target="_blank" rel="noopener">See it live →</a>
+                <a href="https://github.com/luisito2806/Tamagotchi-web" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="javascript">
+            <a class="captura" href="galeria.html?p=reproductor#foto-3" aria-label="See Reproductor de música in the gallery, photo 3">
+              <img src="../img/galeria/reproductor/03-reproduciendo.webp" alt="Reproductor de música: Playing, with songs marked as favorites." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Reproductor de música</h3>
+              <p>Music player with user accounts and favorite songs. Song list, shuffle, repeat, progress bar and volume. Each user signs in and keeps their favorites in the browser.</p>
+              <ul class="tecnologias"><li>JavaScript</li><li>Audio API</li><li>localStorage</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=reproductor">See gallery · 4 photos →</a>
+                <a href="https://github.com/luisito2806/reproductor-musica" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="javascript en-vivo">
+            <a class="captura" href="galeria.html?p=pong#foto-2" aria-label="See Pong vs Pared in the gallery, photo 2">
+              <img src="../img/galeria/pong/02-partida.webp" alt="Pong vs Pared: Game in progress." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Pong vs Pared</h3>
+              <p>Single-player Pong against a wall. Choose keys, colors, points per hit and speed. Every 5 hits the level goes up, and the top 3 scores are saved.</p>
+              <ul class="tecnologias"><li>JavaScript</li><li>Canvas</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=pong">See gallery · 3 photos →</a>
+                <a class="ver-vivo" href="https://luisito2806.github.io/Pingpon/" target="_blank" rel="noopener">See it live →</a>
+                <a href="https://github.com/luisito2806/Pingpon" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="javascript en-vivo">
+            <a class="captura" href="galeria.html?p=cotizador#foto-2" aria-label="See Cotizador web in the gallery, photo 2">
+              <img src="../img/galeria/cotizador/02-cotizacion.webp" alt="Cotizador web: Quote with breakdown and VAT." width="1280" height="800" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Cotizador web</h3>
+              <p>Calculates how much a website costs. Based on the number of pages and extra services (domain, hosting, database, SEO). Accepts discount coupons and shows the breakdown with VAT.</p>
+              <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=cotizador">See gallery · 3 photos →</a>
+                <a class="ver-vivo" href="https://luisito2806.github.io/nav-bars/cotizador-web/" target="_blank" rel="noopener">See it live →</a>
+                <a href="https://github.com/luisito2806/nav-bars" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="grupo-proyectos">
+        <h3 class="subtitulo-grupo">Java and other exercises</h3>
+        <p class="intro-seccion">Java desktop programs, data structures and short exercises.</p>
+        <div class="tarjetas">
+          <article class="tarjeta" data-etiquetas="java">
+            <div class="par">
+              <a class="captura" href="galeria.html?p=estructuras-datos#foto-3" aria-label="See Estructuras de datos in the gallery, photo 3">
+                <img src="../img/galeria/estructuras-datos/03-laberinto-nivel-3.webp" alt="Estructuras de datos: Maze, level 3, solved." width="506" height="613" loading="lazy">
+              </a>
+              <a class="captura" href="galeria.html?p=estructuras-datos#foto-5" aria-label="See Estructuras de datos in the gallery, photo 5">
+                <img src="../img/galeria/estructuras-datos/05-playlist.webp" alt="Estructuras de datos: Playlist app playing a song." width="486" height="563" loading="lazy">
+              </a>
+            </div>
+            <div class="cuerpo">
+              <h3>Estructuras de datos</h3>
+              <p>Java desktop programs for the data structures course. A 10×10 maze that solves itself with recursive backtracking, shown step by step: the path found turns green. Also a playlist app built on a circular doubly linked list.</p>
+              <ul class="tecnologias"><li>Java</li><li>Swing</li><li>Listas enlazadas</li><li>Recursividad</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=estructuras-datos">See gallery · 5 photos →</a>
+                <span class="privado">Private repository</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="java">
+            <a class="captura" href="galeria.html?p=poo#foto-1" aria-label="See Programación orientada a objetos in the gallery, photo 1">
+              <img src="../img/galeria/poo/01-renta-de-vehiculos.webp" alt="Programación orientada a objetos: Vehicle rental: register a car and a motorcycle, view their details and calculate the rental." width="1400" height="875" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Programación orientada a objetos</h3>
+              <p>Java console practice projects. Inheritance, abstract classes and polymorphism. I turned in each assignment on its own branch with a pull request reviewed by the professor. The screenshots are real runs with sample data; what the user types is in green.</p>
+              <ul class="tecnologias"><li>Java</li><li>POO</li><li>Git</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=poo">See gallery · 2 photos →</a>
+                <span class="privado">Private repository</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-etiquetas="javascript en-vivo">
+            <a class="captura" href="galeria.html?p=lista-tareas#foto-2" aria-label="See Lista de tareas in the gallery, photo 2">
+              <img src="../img/galeria/lista-tareas/02-despues-de-recargar.webp" alt="Lista de tareas: Tasks are still there after reloading, with two completed." width="1120" height="460" loading="lazy">
+            </a>
+            <div class="cuerpo">
+              <h3>Lista de tareas</h3>
+              <p>To-do list saved in the browser. Add, mark as done and delete, without losing anything when the page reloads.</p>
+              <ul class="tecnologias"><li>JavaScript</li><li>localStorage</li></ul>
+              <div class="enlaces">
+                <a class="ver-galeria" href="galeria.html?p=lista-tareas">See gallery · 2 photos →</a>
+                <a class="ver-vivo" href="https://luisito2806.github.io/localstorage/" target="_blank" rel="noopener">See it live →</a>
+                <a href="https://github.com/luisito2806/localstorage" target="_blank" rel="noopener">Code →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="seguridad">
+      <h2>Security in my projects</h2>
+      <p class="intro-seccion">I study cybersecurity, so I apply it to what I build. These are the practices I use; each link opens the screen where you can see it at work.</p>
+      <div class="practicas">
+        <article class="practica" id="seguridad-contrasenas">
+          <h3>Passwords nobody can read</h3>
+          <p>No password is stored in plain text: a salted hash (bcrypt or scrypt) is stored and compared in constant time.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=doo-barber#foto-6">Doo Barber: scrypt with random salt</a></li>
+            <li><a href="galeria.html?p=minisuper#foto-1">Mini Súper: bcrypt</a></li>
+            <li><a href="galeria.html?p=tecnoaula#foto-1">TecnoAula: password_hash</a></li>
+            <li><a href="galeria.html?p=calificaciones#foto-2">Grades portal</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-fuerza-bruta">
+          <h3>Brute-force protection</h3>
+          <p>After several failed attempts, login is locked for a while, per user and per IP address.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=doo-barber#foto-6">Doo Barber: 5 attempts per IP, 15-min lockout</a></li>
+            <li><a href="galeria.html?p=tecnoaula#foto-1">TecnoAula: 5 per email and 20 per IP in 15 min</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-sesiones">
+          <h3>Secure sessions</h3>
+          <p>The session is regenerated on login to prevent session fixation, cookies are httpOnly and SameSite, and tokens are stored hashed and expire.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=doo-barber#foto-7">Doo Barber: 32-byte token hashed with SHA-256, 7 days</a></li>
+            <li><a href="galeria.html?p=minisuper#foto-1">Mini Súper: httpOnly, SameSite=strict 12-hour cookie</a></li>
+            <li><a href="galeria.html?p=tecnoaula#foto-3">TecnoAula: “Remember me” with selector and validator; revoked when the user is disabled</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-inyeccion-sql">
+          <h3>No SQL injection</h3>
+          <p>User input is never concatenated into a query: prepared statements or the ORM are used.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=tecnoaula#foto-19">TecnoAula: PDO prepared statements</a></li>
+            <li><a href="galeria.html?p=calificaciones#foto-1">Grades portal: prepared mysqli</a></li>
+            <li><a href="galeria.html?p=minisuper#foto-7">Mini Súper: Sequelize</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-xss-csrf">
+          <h3>XSS and CSRF protection</h3>
+          <p>All user text is escaped before rendering, and forms that change data carry a token or only accept same-site JSON.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=tecnoaula#foto-1">TecnoAula: CSRF token on every form</a></li>
+            <li><a href="galeria.html?p=doo-barber#foto-11">Doo Barber: escapeHtml on everything rendered</a></li>
+            <li><a href="galeria.html?p=minisuper#foto-3">Mini Súper: Content-Security-Policy and JSON-only API</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-autorizacion">
+          <h3>The server decides, not the browser</h3>
+          <p>Permissions, prices and rules are validated on the server. Hiding a button isn't enough: if someone sends the request by hand, the server rejects it.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=minisuper#foto-13">Mini Súper: role checked on every request</a></li>
+            <li><a href="galeria.html?p=tecnoaula#foto-2">TecnoAula: 403 if the role does not match</a></li>
+            <li><a href="galeria.html?p=doo-barber#foto-4">Doo Barber: price comes from the database, not the browser</a></li>
+            <li><a href="galeria.html?p=catalogo#foto-2">Catalog: ignores tampered products and prices</a></li>
+            <li><a href="galeria.html?p=duelo-ronin#foto-4">Duelo Ronin: authoritative server against cheating</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-enumeracion">
+          <h3>Don't leak information</h3>
+          <p>Responses don't reveal whether a user exists, and public identifiers can't be guessed.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=minisuper#foto-1">Mini Súper: dummy hash so timing is equal</a></li>
+            <li><a href="galeria.html?p=tecnoaula#foto-21">TecnoAula: same reset response either way; 1-hour link</a></li>
+            <li><a href="galeria.html?p=doo-barber#foto-5">Doo Barber: random cancellation code</a></li>
+          </ul>
+        </article>
+        <article class="practica" id="seguridad-integridad">
+          <h3>Consistent data, secrets out of the code</h3>
+          <p>Money and inventory operations are transactions that never save halfway, and credentials live outside the repository.</p>
+          <p class="donde">Where I applied it</p>
+          <ul>
+            <li><a href="galeria.html?p=minisuper#foto-5">Mini Súper: transaction with row locks</a></li>
+            <li><a href="galeria.html?p=doo-barber#foto-4">Doo Barber: booking queue with no double-booking</a></li>
+            <li><a href="galeria.html?p=tecnoaula#foto-7">TecnoAula: config.php kept out of the repo</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="formacion">
+      <h2>Education</h2>
+      <ol class="linea-tiempo">
+        <li class="hito">
+          <p class="periodo">2024 – present</p>
+          <h3>B.S. in Computer Systems and Cybersecurity Engineering</h3>
+          <p class="lugar">Universidad Vasco de Quiroga (UVAQ), Morelia</p>
+          <p>Currently in 5th semester. Object-oriented programming, data structures, databases and web development.</p>
+        </li>
+        <li class="hito">
+          <p class="periodo">2021 – 2024</p>
+          <h3>High school</h3>
+          <p class="lugar">Colegio La Paz, Apatzingán, Michoacán</p>
+          <p>Math-physics and chemistry-pharmacobiology tracks.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="habilidades">
+      <h2>Skills</h2>
+      <p class="intro-seccion">The technologies I've used in the projects above.</p>
+      <div class="grupos-habilidades">
+        <div>
+          <h3>Frontend</h3>
+          <ul class="habilidades">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Tailwind CSS</li>
+            <li>Canvas</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <ul class="habilidades">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Socket.IO</li>
+            <li>WebSocket</li>
+            <li>PHP</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Databases</h3>
+          <ul class="habilidades">
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>Sequelize</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Security</h3>
+          <ul class="habilidades">
+            <li>Authentication</li>
+            <li>Access control</li>
+            <li>Secure sessions</li>
+            <li>CSRF / XSS</li>
+            <li>SQL injection</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Other</h3>
+          <ul class="habilidades">
+            <li>Java</li>
+            <li>Git / GitHub</li>
+            <li>Automated testing</li>
+            <li>Teamwork</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contact</h2>
+      <p class="intro-seccion">Have an opening, a project or a question? Get in touch.</p>
+      <ul class="contacto">
+        <li><span>Email</span><a href="mailto:vazquezestradaluis192@gmail.com">vazquezestradaluis192@gmail.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/luisito2806" target="_blank" rel="noopener">luisito2806</a></li>
+        <li><span>CV</span><a href="cv.pdf" download="Resume-Luis-Angel-Vazquez-Estrada.pdf">CV (PDF)</a> · <a href="cv.html">view online</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">Luis Angel Vazquez Estrada</div>
+  </footer>
+  <script src="../js/sitio.js"></script>
+</body>
+</html>

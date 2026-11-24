@@ -1,0 +1,466 @@
+{
+ "bio-terminal/01-inicio.webp": [
+  1280,
+  800
+ ],
+ "bio-terminal/02-incubado.webp": [
+  1280,
+  800
+ ],
+ "bio-terminal/03-desgaste.webp": [
+  1280,
+  800
+ ],
+ "bio-terminal/04-alimentado.webp": [
+  1280,
+  800
+ ],
+ "calificaciones/01-login.webp": [
+  1366,
+  820
+ ],
+ "calificaciones/02-registro.webp": [
+  1366,
+  820
+ ],
+ "calificaciones/03-panel.webp": [
+  1366,
+  820
+ ],
+ "calificaciones/04-todas-las-calificaciones.webp": [
+  1240,
+  420
+ ],
+ "catalogo/01-formulario.webp": [
+  1400,
+  1032
+ ],
+ "catalogo/02-resumen-con-descuento.webp": [
+  1040,
+  580
+ ],
+ "catalogo/03-resumen-sin-descuento.webp": [
+  1040,
+  500
+ ],
+ "chat-socket/01-entrada.webp": [
+  1280,
+  800
+ ],
+ "chat-socket/02-conversacion.webp": [
+  1280,
+  800
+ ],
+ "chat-socket/03-usuario-salio.webp": [
+  1280,
+  800
+ ],
+ "cotizador/01-formulario.webp": [
+  1280,
+  800
+ ],
+ "cotizador/02-cotizacion.webp": [
+  1280,
+  800
+ ],
+ "cotizador/03-primera-version.webp": [
+  1280,
+  800
+ ],
+ "doo-barber/01-reserva.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/02-servicio-y-barbero.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/03-fecha-y-hora.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/03b-confirmar.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/04-reserva-celular.webp": [
+  600,
+  1298
+ ],
+ "doo-barber/05-login.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/06-agenda.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/07-nueva-cita.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/08-bloqueos.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/09-reportes.webp": [
+  1366,
+  820
+ ],
+ "doo-barber/10-configuracion.webp": [
+  1366,
+  820
+ ],
+ "duelo-ronin/01-practica.webp": [
+  1366,
+  820
+ ],
+ "duelo-ronin/02-rival-conectado.webp": [
+  1366,
+  820
+ ],
+ "duelo-ronin/03-cuenta-regresiva.webp": [
+  1366,
+  820
+ ],
+ "duelo-ronin/04-pelea.webp": [
+  1366,
+  820
+ ],
+ "duelo-ronin/05-hitboxes.webp": [
+  1366,
+  820
+ ],
+ "duelo-ronin/06-duelo-lleno.webp": [
+  1366,
+  820
+ ],
+ "duomath/01-ruta.webp": [
+  1280,
+  800
+ ],
+ "duomath/02-ingresar.webp": [
+  1280,
+  800
+ ],
+ "duomath/03-leccion.webp": [
+  1280,
+  800
+ ],
+ "duomath/04-opcion-elegida.webp": [
+  1280,
+  800
+ ],
+ "duomath/05-retroalimentacion.webp": [
+  1280,
+  800
+ ],
+ "estructuras-datos/01-laberinto-nivel-1.webp": [
+  506,
+  613
+ ],
+ "estructuras-datos/02-laberinto-nivel-2.webp": [
+  506,
+  613
+ ],
+ "estructuras-datos/03-laberinto-nivel-3.webp": [
+  506,
+  613
+ ],
+ "estructuras-datos/04-laberinto-nivel-4.webp": [
+  506,
+  613
+ ],
+ "estructuras-datos/05-playlist.webp": [
+  486,
+  563
+ ],
+ "lightship-weather/01-mexico.webp": [
+  1280,
+  800
+ ],
+ "lightship-weather/02-tokio.webp": [
+  1280,
+  800
+ ],
+ "lightship-weather/03-madrid.webp": [
+  1280,
+  800
+ ],
+ "lightship-weather/04-italia.webp": [
+  1280,
+  800
+ ],
+ "lightship-weather/05-respuesta-api.webp": [
+  1400,
+  560
+ ],
+ "lista-tareas/01-tareas.webp": [
+  1120,
+  460
+ ],
+ "lista-tareas/02-despues-de-recargar.webp": [
+  1120,
+  460
+ ],
+ "minisuper/01-login.webp": [
+  1366,
+  820
+ ],
+ "minisuper/02-caja-cerrada.webp": [
+  1366,
+  820
+ ],
+ "minisuper/03-venta.webp": [
+  1366,
+  820
+ ],
+ "minisuper/04-cobro.webp": [
+  1366,
+  820
+ ],
+ "minisuper/05-venta-cobrada.webp": [
+  1366,
+  820
+ ],
+ "minisuper/06-caja.webp": [
+  1366,
+  820
+ ],
+ "minisuper/07-ventas.webp": [
+  1366,
+  820
+ ],
+ "minisuper/08-productos.webp": [
+  1366,
+  820
+ ],
+ "minisuper/09-inventario.webp": [
+  1366,
+  820
+ ],
+ "minisuper/10-compras.webp": [
+  1366,
+  820
+ ],
+ "minisuper/11-nomina.webp": [
+  1366,
+  820
+ ],
+ "minisuper/12-reportes.webp": [
+  1366,
+  820
+ ],
+ "minisuper/13-usuarios.webp": [
+  1366,
+  820
+ ],
+ "minisuper/14-configuracion.webp": [
+  1366,
+  820
+ ],
+ "offrly/01-entrada.webp": [
+  600,
+  1298
+ ],
+ "offrly/02-perfiles.webp": [
+  600,
+  1298
+ ],
+ "offrly/03-inicio.webp": [
+  600,
+  1298
+ ],
+ "offrly/04-oferta-oficio.webp": [
+  600,
+  1298
+ ],
+ "offrly/05-oferta-horario.webp": [
+  600,
+  1298
+ ],
+ "offrly/06-oferta-zona-y-foto.webp": [
+  600,
+  1298
+ ],
+ "offrly/07-oferta-presupuesto.webp": [
+  600,
+  1298
+ ],
+ "offrly/08-buscando-profesionistas.webp": [
+  600,
+  1298
+ ],
+ "offrly/09-chats.webp": [
+  600,
+  1298
+ ],
+ "offrly/10-negociacion.webp": [
+  600,
+  1298
+ ],
+ "offrly/11-contraoferta.webp": [
+  600,
+  1298
+ ],
+ "offrly/12-comparar-cotizaciones.webp": [
+  600,
+  1298
+ ],
+ "offrly/13-perfil-cliente.webp": [
+  600,
+  1298
+ ],
+ "offrly/14-inicio-profesionista.webp": [
+  600,
+  1298
+ ],
+ "offrly/15-perfil-profesionista.webp": [
+  600,
+  1298
+ ],
+ "offrly/16-portafolio-profesionista.webp": [
+  600,
+  1298
+ ],
+ "pokedex/01-charizard.webp": [
+  1366,
+  820
+ ],
+ "pokedex/02-estadisticas.webp": [
+  1366,
+  820
+ ],
+ "pokedex/03-catalogo.webp": [
+  1366,
+  820
+ ],
+ "pokedex/04-pikachu.webp": [
+  1366,
+  820
+ ],
+ "pokedex/05-gengar.webp": [
+  1366,
+  820
+ ],
+ "pong/01-configuracion.webp": [
+  1280,
+  800
+ ],
+ "pong/02-partida.webp": [
+  1280,
+  800
+ ],
+ "pong/03-fin-de-partida.webp": [
+  1280,
+  800
+ ],
+ "poo/01-renta-de-vehiculos.webp": [
+  1400,
+  875
+ ],
+ "poo/02-banco.webp": [
+  1400,
+  875
+ ],
+ "reproductor/01-inicio.webp": [
+  1280,
+  800
+ ],
+ "reproductor/02-registro.webp": [
+  1280,
+  800
+ ],
+ "reproductor/03-reproduciendo.webp": [
+  1280,
+  800
+ ],
+ "reproductor/04-me-gusta.webp": [
+  1280,
+  800
+ ],
+ "tecnoaula/01-login.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/03-admin-dashboard.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/04-admin-usuarios.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/05-admin-roles.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/06-admin-cursos.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/07-reportes.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/08-configuracion.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/09-docente-inicio.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/10-docente-cursos.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/11-docente-curso.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/12-docente-alumnos.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/13-director.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/14-alumno-cursos.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/15-alumno-curso.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/16-alumno-tareas.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/17-alumno-calendario.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/18-alumno-calificaciones.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/19-foros.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/20-foro.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/21-mensajes.webp": [
+  1366,
+  820
+ ],
+ "tecnoaula/22-perfil.webp": [
+  1366,
+  820
+ ]
+}

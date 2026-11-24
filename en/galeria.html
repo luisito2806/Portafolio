@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Luis Angel Vazquez Estrada</title>
+  <meta name="description" content="Computer Systems and Cybersecurity Engineering student at UVAQ. I build database-driven systems, real-time apps and games, taking care of security from the login screen to the database.">
+  <link rel="icon" href="../img/icono.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icono-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../img/icono-180.png">
+  <link rel="canonical" href="https://luisito2806.github.io/Portafolio/en/galeria.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Luis Angel Vazquez Estrada">
+  <meta property="og:title" content="Gallery | Luis Angel Vazquez Estrada">
+  <meta property="og:description" content="Computer Systems and Cybersecurity Engineering student at UVAQ. I build database-driven systems, real-time apps and games, taking care of security from the login screen to the database.">
+  <meta property="og:url" content="https://luisito2806.github.io/Portafolio/en/galeria.html">
+  <meta property="og:image" content="https://luisito2806.github.io/Portafolio/img/vista-previa-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luis Angel Vazquez Estrada: Computer Systems and Cybersecurity Engineering student">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>(function(){try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-tema',t);}catch(e){}})();</script>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <nav class="barra">
+    <div class="contenedor barra-interior">
+      <ul class="menu">
+        <li><a href="index.html#sobre-mi">About</a></li>
+        <li><a href="index.html#proyectos">Projects</a></li>
+        <li><a href="index.html#seguridad">Security</a></li>
+        <li><a href="index.html#formacion">Education</a></li>
+        <li><a href="index.html#habilidades">Skills</a></li>
+        <li><a href="index.html#contacto">Contact</a></li>
+      </ul>
+      <div class="acciones-barra">
+        <a class="cambiar-idioma" href="../galeria.html" id="otro-idioma" hreflang="es" lang="es" title="Español">ES</a>
+        <button type="button" class="cambiar-tema" id="cambiar-tema" aria-label="Toggle light and dark mode" title="Toggle light and dark mode">
+          <svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contenedor">
+    <a class="volver" href="index.html#proyectos">← All projects</a>
+
+    <header class="cabecera-galeria" id="cabecera">
+      <h1>Gallery</h1>
+      <noscript><p>This gallery needs JavaScript. <a href="index.html#proyectos">See all projects</a></p></noscript>
+    </header>
+
+    <section class="galeria" aria-label="Gallery">
+      <div class="rejilla" id="rejilla"></div>
+    </section>
+
+    <nav class="entre-proyectos" id="entre-proyectos" aria-label="← Previous project / Next project →"></nav>
+  </main>
+
+  <dialog class="visor" id="visor" aria-label="Gallery">
+    <div class="visor-barra">
+      <span id="visor-contador"></span>
+      <button type="button" class="visor-cerrar" id="visor-cerrar" aria-label="Close">✕</button>
+    </div>
+    <figure class="visor-figura">
+      <img id="visor-img" alt="">
+      <figcaption id="visor-pie"></figcaption>
+    </figure>
+    <button type="button" class="visor-flecha anterior" id="visor-anterior" aria-label="Previous photo">‹</button>
+    <button type="button" class="visor-flecha siguiente" id="visor-siguiente" aria-label="Next photo">›</button>
+  </dialog>
+
+  <footer>
+    <div class="contenedor">Luis Angel Vazquez Estrada</div>
+  </footer>
+  <script>
+    window.GALERIA = {"lang":"en","base":"../","nombre":"Luis Angel Vazquez Estrada","textos":{"titulo":"Gallery","volver":"← All projects","queHice":"What I did","anterior":"← Previous project","siguiente":"Next project →","noEncontrado":"Project not found","noEncontradoTexto":"That link doesn't match any project.","verTodos":"See all projects","cerrar":"Close","fotoAnterior":"Previous photo","fotoSiguiente":"Next photo","sinJs":"This gallery needs JavaScript.","verVivo":"See it live →","codigoGithub":"Code on GitHub →"}};
+    window.GALERIA.textos.capturas = (n) => `${n} ${n === 1 ? 'screenshot' : 'screenshots'}`;
+    window.GALERIA.textos.ampliar = (i, p) => `Enlarge photo ${i}: ${p}`;
+  </script>
+  <script src="../js/proyectos.js"></script>
+  <script src="../js/galeria.js"></script>
+  <script src="../js/sitio.js"></script>
+</body>
+</html>

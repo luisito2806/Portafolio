@@ -4,18 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Galería | Luis Angel Vazquez Estrada</title>
-  <meta name="description" content="Galería de capturas de los proyectos de Luis Angel Vazquez Estrada.">
+  <meta name="description" content="Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad en la UVAQ. Hago sistemas con base de datos, aplicaciones en tiempo real y juegos, cuidando la seguridad desde el inicio de sesión hasta la base de datos.">
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icono-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/icono-180.png">
+  <link rel="canonical" href="https://luisito2806.github.io/Portafolio/galeria.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Luis Angel Vazquez Estrada">
+  <meta property="og:title" content="Galería | Luis Angel Vazquez Estrada">
+  <meta property="og:description" content="Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad en la UVAQ. Hago sistemas con base de datos, aplicaciones en tiempo real y juegos, cuidando la seguridad desde el inicio de sesión hasta la base de datos.">
+  <meta property="og:url" content="https://luisito2806.github.io/Portafolio/galeria.html">
+  <meta property="og:image" content="https://luisito2806.github.io/Portafolio/img/vista-previa.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Luis Angel Vazquez Estrada: Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>(function(){try{var t=localStorage.getItem('tema');if(t)document.documentElement.setAttribute('data-tema',t);}catch(e){}})();</script>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <nav>
-    <div class="contenedor">
-      <ul>
+  <nav class="barra">
+    <div class="contenedor barra-interior">
+      <ul class="menu">
         <li><a href="index.html#sobre-mi">Sobre mí</a></li>
         <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#seguridad">Seguridad</a></li>
+        <li><a href="index.html#formacion">Formación</a></li>
         <li><a href="index.html#habilidades">Habilidades</a></li>
         <li><a href="index.html#contacto">Contacto</a></li>
       </ul>
+      <div class="acciones-barra">
+        <a class="cambiar-idioma" href="en/galeria.html" id="otro-idioma" hreflang="en" lang="en" title="English">EN</a>
+        <button type="button" class="cambiar-tema" id="cambiar-tema" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">
+          <svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -24,17 +49,17 @@
 
     <header class="cabecera-galeria" id="cabecera">
       <h1>Galería</h1>
-      <noscript><p>Esta galería necesita JavaScript. Puedes ver los proyectos en la <a href="index.html#proyectos">página principal</a>.</p></noscript>
+      <noscript><p>Esta galería necesita JavaScript. <a href="index.html#proyectos">Ver todos los proyectos</a></p></noscript>
     </header>
 
-    <section class="galeria" aria-label="Capturas del proyecto">
+    <section class="galeria" aria-label="Galería">
       <div class="rejilla" id="rejilla"></div>
     </section>
 
-    <nav class="entre-proyectos" id="entre-proyectos" aria-label="Otros proyectos"></nav>
+    <nav class="entre-proyectos" id="entre-proyectos" aria-label="← Proyecto anterior / Proyecto siguiente →"></nav>
   </main>
 
-  <dialog class="visor" id="visor" aria-label="Captura ampliada">
+  <dialog class="visor" id="visor" aria-label="Galería">
     <div class="visor-barra">
       <span id="visor-contador"></span>
       <button type="button" class="visor-cerrar" id="visor-cerrar" aria-label="Cerrar">✕</button>
@@ -50,149 +75,13 @@
   <footer>
     <div class="contenedor">Luis Angel Vazquez Estrada</div>
   </footer>
-
-  <script src="js/proyectos.js"></script>
   <script>
-    (function () {
-      const proyectos = window.PROYECTOS || [];
-      const slug = new URLSearchParams(location.search).get('p');
-      const indice = proyectos.findIndex((p) => p.slug === slug);
-      const proyecto = proyectos[indice];
-      const cabecera = document.getElementById('cabecera');
-      const rejilla = document.getElementById('rejilla');
-
-      // Crea un elemento con atributos y texto sin usar innerHTML.
-      function el(etiqueta, atributos, ...hijos) {
-        const nodo = document.createElement(etiqueta);
-        for (const [k, v] of Object.entries(atributos || {})) {
-          if (v !== undefined && v !== null) nodo.setAttribute(k, v);
-        }
-        for (const h of hijos) nodo.append(h);
-        return nodo;
-      }
-
-      if (!proyecto) {
-        cabecera.replaceChildren(
-          el('h1', {}, 'Proyecto no encontrado'),
-          el('p', { class: 'que-es' }, 'Ese enlace no corresponde a ningún proyecto.'),
-          el('p', {}, el('a', { href: 'index.html#proyectos' }, 'Ver todos los proyectos'))
-        );
-        return;
-      }
-
-      document.title = `${proyecto.titulo} · Galería | Luis Angel Vazquez Estrada`;
-
-      // Cabecera del proyecto
-      const partes = [];
-      if (proyecto.etiqueta) partes.push(el('span', { class: 'etiqueta-equipo' }, proyecto.etiqueta));
-      partes.push(el('h1', {}, proyecto.titulo));
-      partes.push(el('p', { class: 'que-es' }, proyecto.queEs));
-      const texto = el('div', { class: 'texto-proyecto' });
-      for (const parrafo of proyecto.descripcion) texto.append(el('p', {}, parrafo));
-      partes.push(texto);
-      if (proyecto.aportes) {
-        const lista = el('ul', { class: 'aportes' });
-        for (const a of proyecto.aportes) {
-          const m = a.match(/^([^:]{3,45}):\s(.+)$/);
-          lista.append(m ? el('li', {}, el('strong', {}, m[1] + ':'), ' ' + m[2]) : el('li', {}, a));
-        }
-        partes.push(el('h2', { class: 'subtitulo-aportes' }, 'Qué hice'), lista);
-      }
-      const tecnologias = el('ul', { class: 'tecnologias' });
-      for (const t of proyecto.tecnologias) tecnologias.append(el('li', {}, t));
-      partes.push(tecnologias);
-      const n = proyecto.fotos.length;
-      partes.push(el('div', { class: 'enlaces' },
-        proyecto.demo ? el('a', { class: 'ver-vivo', href: proyecto.demo, target: '_blank', rel: 'noopener' }, 'Ver en vivo →') : '',
-        el('span', { class: 'privado' }, `${n} ${n === 1 ? 'captura' : 'capturas'}`),
-        proyecto.repo
-          ? el('a', { href: proyecto.repo, target: '_blank', rel: 'noopener' }, 'Ver código en GitHub →')
-          : el('span', { class: 'privado' }, proyecto.repoTexto)
-      ));
-      cabecera.replaceChildren(...partes);
-
-      // Rejilla de fotos. Las capturas de celular van en su propia rejilla más angosta.
-      const esMovil = (f) => f.h > f.w * 1.4;
-      const todasMovil = proyecto.fotos.every(esMovil);
-      rejilla.classList.toggle('rejilla-movil', todasMovil);
-      proyecto.fotos.forEach((foto, i) => {
-        const boton = el('button', { type: 'button', class: 'miniatura' + (esMovil(foto) ? ' movil' : ''), 'aria-label': `Ampliar foto ${i + 1}: ${foto.pie}` },
-          el('img', { src: foto.src, alt: foto.pie, width: foto.w, height: foto.h, loading: i < 6 ? 'eager' : 'lazy' }));
-        boton.addEventListener('click', () => abrir(i));
-        const pie = el('figcaption', {},
-          el('span', { class: 'titulo-foto' }, el('span', { class: 'numero' }, String(i + 1).padStart(2, '0')), ' ', foto.pie));
-        if (foto.explicacion) pie.append(el('span', { class: 'explicacion' }, foto.explicacion));
-        rejilla.append(el('figure', { class: 'foto-galeria', id: `foto-${i + 1}` }, boton, pie));
-      });
-
-      // Enlaces al proyecto anterior y siguiente
-      const entre = document.getElementById('entre-proyectos');
-      const anterior = proyectos[(indice - 1 + proyectos.length) % proyectos.length];
-      const siguiente = proyectos[(indice + 1) % proyectos.length];
-      entre.append(
-        el('a', { href: `galeria.html?p=${anterior.slug}`, class: 'anterior' }, el('span', {}, '← Proyecto anterior'), el('strong', {}, anterior.titulo)),
-        el('a', { href: `galeria.html?p=${siguiente.slug}`, class: 'siguiente' }, el('span', {}, 'Proyecto siguiente →'), el('strong', {}, siguiente.titulo))
-      );
-
-      // Visor
-      const visor = document.getElementById('visor');
-      const visorImg = document.getElementById('visor-img');
-      const visorPie = document.getElementById('visor-pie');
-      const contador = document.getElementById('visor-contador');
-      let actual = 0;
-      let origen = null;
-
-      function mostrar(i) {
-        actual = (i + n) % n;
-        const foto = proyecto.fotos[actual];
-        visorImg.src = foto.src;
-        visorImg.alt = foto.pie;
-        visorImg.width = foto.w;
-        visorImg.height = foto.h;
-        visorImg.classList.toggle('movil', esMovil(foto));
-        visorPie.replaceChildren(el('strong', {}, foto.pie));
-        if (foto.explicacion) visorPie.append(el('span', {}, foto.explicacion));
-        contador.textContent = `${actual + 1} / ${n}`;
-        history.replaceState(null, '', `#foto-${actual + 1}`);
-        // Precarga la siguiente
-        new Image().src = proyecto.fotos[(actual + 1) % n].src;
-      }
-      function abrir(i) {
-        origen = document.activeElement;
-        mostrar(i);
-        visor.showModal();
-      }
-      function cerrar() {
-        visor.close();
-      }
-      visor.addEventListener('close', () => {
-        history.replaceState(null, '', location.pathname + location.search);
-        if (origen) origen.focus();
-      });
-      document.getElementById('visor-cerrar').addEventListener('click', cerrar);
-      document.getElementById('visor-anterior').addEventListener('click', () => mostrar(actual - 1));
-      document.getElementById('visor-siguiente').addEventListener('click', () => mostrar(actual + 1));
-      visor.addEventListener('click', (e) => { if (e.target === visor) cerrar(); });
-      visor.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') mostrar(actual - 1);
-        if (e.key === 'ArrowRight') mostrar(actual + 1);
-      });
-      if (n < 2) visor.classList.add('una-foto');
-
-      // Deslizar en el celular
-      let x0 = null;
-      visor.addEventListener('pointerdown', (e) => { x0 = e.clientX; });
-      visor.addEventListener('pointerup', (e) => {
-        if (x0 === null) return;
-        const dx = e.clientX - x0;
-        x0 = null;
-        if (Math.abs(dx) > 50) mostrar(actual + (dx < 0 ? 1 : -1));
-      });
-
-      // Abrir directo una foto si el enlace trae #foto-N
-      const m = location.hash.match(/^#foto-(\d+)$/);
-      if (m && +m[1] >= 1 && +m[1] <= n) abrir(+m[1] - 1);
-    })();
+    window.GALERIA = {"lang":"es","base":"","nombre":"Luis Angel Vazquez Estrada","textos":{"titulo":"Galería","volver":"← Todos los proyectos","queHice":"Qué hice","anterior":"← Proyecto anterior","siguiente":"Proyecto siguiente →","noEncontrado":"Proyecto no encontrado","noEncontradoTexto":"Ese enlace no corresponde a ningún proyecto.","verTodos":"Ver todos los proyectos","cerrar":"Cerrar","fotoAnterior":"Foto anterior","fotoSiguiente":"Foto siguiente","sinJs":"Esta galería necesita JavaScript.","verVivo":"Ver en vivo →","codigoGithub":"Código en GitHub →"}};
+    window.GALERIA.textos.capturas = (n) => `${n} ${n === 1 ? 'captura' : 'capturas'}`;
+    window.GALERIA.textos.ampliar = (i, p) => `Ampliar foto ${i}: ${p}`;
   </script>
+  <script src="js/proyectos.js"></script>
+  <script src="js/galeria.js"></script>
+  <script src="js/sitio.js"></script>
 </body>
 </html>

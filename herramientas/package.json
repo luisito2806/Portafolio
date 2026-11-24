@@ -1,0 +1,12 @@
+{
+  "name": "portafolio-herramientas",
+  "private": true,
+  "description": "Genera las páginas, los PDF del CV y las imágenes del portafolio",
+  "scripts": {
+    "generar": "node generar.js",
+    "imagenes": "node crear-imagenes.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^25.18.1"
+  }
+}
