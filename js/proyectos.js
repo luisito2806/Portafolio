@@ -183,6 +183,8 @@ window.PROYECTOS = {
     "PowerShell"
    ],
    "repo": "https://github.com/luisito2806/minisuper",
+   "demo": "https://minisuper-demo.onrender.com/",
+   "demoNota": "Entra con admin / Admin123! (o cajero / Cajero123!). Los datos se reinician solos. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
    "fotos": [
     {
      "archivo": "01-login",
@@ -321,6 +323,8 @@ window.PROYECTOS = {
     "CSS"
    ],
    "repo": "https://github.com/luisito2806/PW",
+   "demo": "https://doo-barber.onrender.com/",
+   "demoNota": "Puedes hacer una reserva de prueba. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
    "fotos": [
     {
      "archivo": "01-reserva",
@@ -432,6 +436,8 @@ window.PROYECTOS = {
     "JavaScript"
    ],
    "repo": "https://github.com/luisito2806/1vs1",
+   "demo": "https://duelo-ronin.onrender.com/",
+   "demoNota": "Ábrelo en dos navegadores o dispositivos para pelear; con uno solo puedes practicar. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
    "fotos": [
     {
      "archivo": "01-practica",
@@ -892,6 +898,8 @@ window.PROYECTOS = {
     "Tailwind CSS"
    ],
    "repo": "https://github.com/luisito2806/IA-clima-",
+   "demo": "https://lightship-weather.onrender.com/",
+   "demoNota": "Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
    "fotos": [
     {
      "archivo": "01-mexico",
@@ -1477,6 +1485,8 @@ window.PROYECTOS = {
     "PowerShell"
    ],
    "repo": "https://github.com/luisito2806/minisuper",
+   "demo": "https://minisuper-demo.onrender.com/",
+   "demoNota": "Sign in with admin / Admin123! (or cajero / Cajero123!). Data resets on its own. It runs on a free server, so it may take about a minute to wake up.",
    "fotos": [
     {
      "archivo": "01-login",
@@ -1615,6 +1625,8 @@ window.PROYECTOS = {
     "CSS"
    ],
    "repo": "https://github.com/luisito2806/PW",
+   "demo": "https://doo-barber.onrender.com/",
+   "demoNota": "You can make a test booking. It runs on a free server, so it may take about a minute to wake up.",
    "fotos": [
     {
      "archivo": "01-reserva",
@@ -1726,6 +1738,8 @@ window.PROYECTOS = {
     "JavaScript"
    ],
    "repo": "https://github.com/luisito2806/1vs1",
+   "demo": "https://duelo-ronin.onrender.com/",
+   "demoNota": "Open it in two browsers or devices to fight; with one you can practice. It runs on a free server, so it may take about a minute to wake up.",
    "fotos": [
     {
      "archivo": "01-practica",
@@ -2186,6 +2200,8 @@ window.PROYECTOS = {
     "Tailwind CSS"
    ],
    "repo": "https://github.com/luisito2806/IA-clima-",
+   "demo": "https://lightship-weather.onrender.com/",
+   "demoNota": "It runs on a free server, so it may take about a minute to wake up.",
    "fotos": [
     {
      "archivo": "01-mexico",

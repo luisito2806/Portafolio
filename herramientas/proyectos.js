@@ -45,6 +45,8 @@ module.exports = [
   },
   {
     slug: 'minisuper',
+    demo: 'https://minisuper-demo.onrender.com/',
+    demoNota: 'Entra con admin / Admin123! (o cajero / Cajero123!). Los datos se reinician solos. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.',
     titulo: 'Mini Súper',
     queEs: 'Punto de venta para una tienda de abarrotes en una zona rural.',
     descripcion: [
@@ -79,6 +81,8 @@ module.exports = [
   },
   {
     slug: 'doo-barber',
+    demo: 'https://doo-barber.onrender.com/',
+    demoNota: 'Puedes hacer una reserva de prueba. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.',
     titulo: 'Doo Barber',
     etiqueta: 'Proyecto personal',
     queEs: 'Sistema de citas para barberías, pensado para venderse a varios negocios.',
@@ -109,6 +113,8 @@ module.exports = [
   },
   {
     slug: 'duelo-ronin',
+    demo: 'https://duelo-ronin.onrender.com/',
+    demoNota: 'Ábrelo en dos navegadores o dispositivos para pelear; con uno solo puedes practicar. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.',
     titulo: 'Duelo Ronin 1 vs 1',
     queEs: 'Juego de pelea en tiempo real para dos jugadores en el navegador.',
     descripcion: [
@@ -252,6 +258,8 @@ module.exports = [
   },
   {
     slug: 'lightship-weather',
+    demo: 'https://lightship-weather.onrender.com/',
+    demoNota: 'Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.',
     titulo: 'Lightship Weather',
     queEs: 'API de clima que lee la información de cada ciudad desde archivos Markdown.',
     descripcion: ['El servidor con Express expone /api/clima/:ciudad y la página lo consume para mostrar el clima de cada ciudad con tarjetas.'],

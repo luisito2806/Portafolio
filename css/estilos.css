@@ -1338,3 +1338,10 @@ footer {
 .cv li p + p {
   margin-top: 0;
 }
+
+/* Nota junto a "Ver en vivo" (usuario de prueba, tiempo de arranque…) */
+.nota-demo {
+  margin-top: 8px;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}

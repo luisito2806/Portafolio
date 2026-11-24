@@ -187,6 +187,7 @@ function proyectos(lang) {
       repo: p.repo,
       repoTexto: lang === 'en' ? en.repoTexto || p.repoTexto : p.repoTexto,
       demo: p.demo,
+      demoNota: p.demo ? pick('demoNota') : undefined,
       fotos: p.fotos.map(([f, pie]) => {
         const clave = `${p.slug}/${f}.webp`;
         if (!medidas[clave]) faltan.push(`medidas de ${clave}`);
@@ -297,7 +298,8 @@ ${s}</a>`;
     const partes = [`<a class="ver-galeria" href="${galeria(p.slug)}">${ui.verGaleria(p.fotos.length)}</a>`];
     if (p.demo) partes.push(`<a class="ver-vivo" href="${p.demo}" target="_blank" rel="noopener">${ui.verVivo}</a>`);
     partes.push(p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">${corto ? ui.codigo : ui.codigoGithub}</a>` : `<span class="privado">${esc(p.repoTexto)}</span>`);
-    return `${s}<div class="enlaces">\n${partes.map((x) => `${s}  ${x}`).join('\n')}\n${s}</div>`;
+    const nota = p.demoNota ? `\n${s}<p class="nota-demo">${esc(p.demoNota)}</p>` : '';
+    return `${s}<div class="enlaces">\n${partes.map((x) => `${s}  ${x}`).join('\n')}\n${s}</div>${nota}`;
   }
   const tecs = (p) => `<ul class="tecnologias">${p.tecnologias.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
 

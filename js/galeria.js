@@ -62,6 +62,7 @@
       ? el('a', { href: proyecto.repo, target: '_blank', rel: 'noopener' }, T.codigoGithub)
       : el('span', { class: 'privado' }, proyecto.repoTexto)
   ));
+  if (proyecto.demoNota) partes.push(el('p', { class: 'nota-demo' }, proyecto.demoNota));
   cabecera.replaceChildren(...partes);
 
   // Rejilla de fotos. Las capturas de celular van en una rejilla más angosta.

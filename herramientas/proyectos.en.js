@@ -40,6 +40,7 @@ module.exports = {
   },
 
   minisuper: {
+    demoNota: 'Sign in with admin / Admin123! (or cajero / Cajero123!). Data resets on its own. It runs on a free server, so it may take about a minute to wake up.',
     queEs: 'Point-of-sale system for a small grocery store in a rural area.',
     descripcion: [
       'The store sells, charges and stores everything on its own computer, so it works without internet. From the city, the owner can check the store with a USB drive, a remote connection or a cloud dashboard.',
@@ -71,6 +72,7 @@ module.exports = {
   },
 
   'doo-barber': {
+    demoNota: 'You can make a test booking. It runs on a free server, so it may take about a minute to wake up.',
     etiqueta: 'Personal project',
     queEs: 'Appointment system for barbershops, designed to be sold to several businesses.',
     descripcion: [
@@ -98,6 +100,7 @@ module.exports = {
   },
 
   'duelo-ronin': {
+    demoNota: 'Open it in two browsers or devices to fight; with one you can practice. It runs on a free server, so it may take about a minute to wake up.',
     queEs: 'Real-time two-player fighting game in the browser.',
     descripcion: [
       'Two people join from their browsers and fight two rounds with punches, kicks, jumps and blocks. The server simulates physics and hits; browsers only send key presses.',
@@ -217,6 +220,7 @@ module.exports = {
   },
 
   'lightship-weather': {
+    demoNota: 'It runs on a free server, so it may take about a minute to wake up.',
     queEs: 'Weather API that reads each city’s data from Markdown files.',
     descripcion: ['The Express server exposes /api/clima/:ciudad and the page consumes it to show each city’s weather as cards.'],
     fotos: {
