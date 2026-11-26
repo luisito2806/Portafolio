@@ -185,6 +185,16 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/minisuper",
    "demo": "https://minisuper-demo.onrender.com/",
    "demoNota": "Entra con admin / Admin123! (o cajero / Cajero123!). Los datos se reinician solos. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
+   "seguridad": {
+    "aplica": [
+     "Contraseñas con bcrypt. Si el usuario no existe se compara contra un hash falso, para que la respuesta tarde lo mismo y no revele qué usuarios hay.",
+     "Sesión en una cookie httpOnly y SameSite=strict que caduca a las 12 horas.",
+     "El servidor revisa el rol (administrador o cajero) en cada petición; esconder un botón no es lo único que protege.",
+     "Cabeceras Content-Security-Policy, X-Frame-Options y nosniff, y una API que solo acepta JSON.",
+     "Consultas con Sequelize (sin SQL armado a mano) y cada venta en una transacción con bloqueo de filas, para que caja e inventario nunca queden a medias."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-login",
@@ -325,6 +335,16 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/PW",
    "demo": "https://doo-barber.onrender.com/",
    "demoNota": "Puedes hacer una reserva de prueba. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
+   "seguridad": {
+    "aplica": [
+     "Contraseña del dueño con scrypt y sal aleatoria, comparada en tiempo constante (timingSafeEqual).",
+     "Después de 5 intentos fallidos desde la misma IP, el acceso se bloquea 15 minutos.",
+     "Token de sesión aleatorio de 32 bytes; en la base solo se guarda su hash SHA-256 y caduca a los 7 días.",
+     "El precio de cada servicio sale de la base de datos, nunca del navegador, y el servidor rechaza citas que se empalman.",
+     "escapeHtml en todo lo que se pinta, cabeceras X-Frame-Options y nosniff, y un código de cancelación aleatorio que no se puede adivinar."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-reserva",
@@ -438,6 +458,15 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/1vs1",
    "demo": "https://duelo-ronin.onrender.com/",
    "demoNota": "Ábrelo en dos navegadores o dispositivos para pelear; con uno solo puedes practicar. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
+   "seguridad": {
+    "aplica": [
+     "Servidor autoritativo: la física, los golpes y la vida se calculan en el servidor. El navegador solo dice qué teclas están presionadas, así que no puede mandar “gané” ni mover al personaje a otra parte.",
+     "Cada mensaje del jugador se limpia: solo se aceptan los botones conocidos con valor verdadero o falso; todo lo demás se descarta.",
+     "El cupo de 2 se decide al conectarse: un tercer visitante recibe “Duelo lleno” y nunca entra a la sala ni recibe el estado de la pelea.",
+     "El identificador del jugador se valida con una expresión regular; si no es válido, el servidor genera uno nuevo con crypto.randomUUID."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-practica",
@@ -512,6 +541,17 @@ window.PROYECTOS = {
     "CSS"
    ],
    "repo": "https://github.com/luisito2806/TecnoAula",
+   "seguridad": {
+    "aplica": [
+     "Contraseñas con password_hash y la sesión se regenera al entrar (session_regenerate_id) para evitar fijación de sesión.",
+     "Límite de intentos: 5 por correo y 20 por IP cada 15 minutos.",
+     "Token CSRF en cada formulario, comparado con hash_equals.",
+     "“Recordarme” con selector y validador generados con random_bytes, en cookie httpOnly y SameSite; se revocan al desactivar al usuario.",
+     "PDO con consultas preparadas, y respuesta 403 si el rol no corresponde a la página.",
+     "La recuperación de contraseña responde igual exista o no el correo, el enlace dura 1 hora y config.php con las credenciales queda fuera del repositorio."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-login",
@@ -702,6 +742,16 @@ window.PROYECTOS = {
     "Sesiones"
    ],
    "repo": "https://github.com/luisito2806/Ambientes-web",
+   "seguridad": {
+    "aplica": [
+     "Contraseñas con password_hash y password_verify.",
+     "La sesión se regenera al iniciar sesión y se destruye al salir.",
+     "El panel y la lista de calificaciones redirigen al login si no hay sesión, y cada alumno solo ve sus propias calificaciones. La lista antes se abría sin sesión: lo encontré revisando mi código y lo corregí.",
+     "Consultas preparadas con mysqli para evitar inyección SQL.",
+     "htmlspecialchars al mostrar los datos, para que nadie pueda inyectar HTML."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-login",
@@ -730,8 +780,8 @@ window.PROYECTOS = {
     {
      "archivo": "04-todas-las-calificaciones",
      "src": "img/galeria/calificaciones/04-todas-las-calificaciones.webp",
-     "pie": "Lista general de calificaciones.",
-     "explicacion": "Lista general de la tabla de calificaciones, con cada texto escapado con htmlspecialchars.",
+     "pie": "Lista de calificaciones (antes de la corrección).",
+     "explicacion": "Así se veía la lista antes de una corrección de seguridad: se abría sin sesión y mostraba a todos los alumnos. Ahora pide sesión y cada alumno ve solo sus calificaciones. Cada texto se escapa con htmlspecialchars.",
      "w": 1240,
      "h": 420
     }
@@ -756,6 +806,14 @@ window.PROYECTOS = {
     "CSS"
    ],
    "repo": "https://github.com/luisito2806/Pokedex",
+   "seguridad": {
+    "aplica": [
+     "La PokéAPI se consulta desde PHP: el navegador nunca llama a la API externa directamente.",
+     "Lo que escribe el usuario pasa por urlencode antes de ir a la API, así no puede cambiar la ruta de la petición.",
+     "La búsqueda y los datos se muestran con htmlspecialchars, sin riesgo de inyectar HTML."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-charizard",
@@ -817,6 +875,14 @@ window.PROYECTOS = {
     "Formularios GET"
    ],
    "repo": "https://github.com/luisito2806/PHP-formulario",
+   "seguridad": {
+    "aplica": [
+     "El precio y los productos salen del arreglo del servidor: si alguien altera el formulario, los productos que no existen se ignoran y el precio no se puede cambiar.",
+     "El nombre del cliente se muestra con htmlspecialchars.",
+     "Se valida que haya nombre y al menos un producto antes de calcular."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-formulario",
@@ -859,6 +925,14 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/socket",
    "demo": "https://chat-tiempo-real-zwkv.onrender.com/",
    "demoNota": "Ábrelo en dos pestañas o comparte el enlace para chatear. Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
+   "seguridad": {
+    "aplica": [
+     "Los mensajes se pintan con textContent, no como HTML: nadie puede inyectar código en el chat de los demás.",
+     "El servidor recorta el nombre a 20 caracteres y cada mensaje a 500, y descarta los vacíos.",
+     "Solo puede mandar mensajes quien ya se registró con un nombre; el nombre y el color los guarda el servidor, no el navegador."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-entrada",
@@ -902,6 +976,14 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/IA-clima-",
    "demo": "https://lightship-weather.onrender.com/",
    "demoNota": "Al estar en un servidor gratuito, puede tardar alrededor de un minuto en despertar.",
+   "seguridad": {
+    "aplica": [
+     "API de solo lectura: no recibe datos del usuario ni guarda nada.",
+     "La ciudad de la URL se valida contra una lista blanca antes de leer el disco, así nadie puede pedir “../algo” para leer archivos fuera de la carpeta de datos.",
+     "Si la ciudad no existe responde 404 en JSON con la lista de ciudades disponibles, sin mostrar errores internos."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-mexico",
@@ -959,6 +1041,15 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/duolingo-matematico",
    "demo": "https://luisito2806.github.io/duolingo-matematico/",
+   "seguridad": {
+    "aplica": [
+     "Todo corre en el navegador: no hay servidor ni base de datos que atacar, y no se envían datos a ningún lado.",
+     "Las preguntas y opciones se pintan con textContent."
+    ],
+    "mejora": [
+     "La clave del perfil solo separa a los alumnos que usan la misma computadora y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor, como en Doo Barber."
+    ]
+   },
    "fotos": [
     {
      "archivo": "01-ruta",
@@ -1016,6 +1107,13 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/Tamagotchi-web",
    "demo": "https://luisito2806.github.io/Tamagotchi-web/",
+   "seguridad": {
+    "aplica": [
+     "Todo corre en el navegador, sin servidor ni datos personales.",
+     "El nombre de la mascota se limita a 12 caracteres y se muestra con textContent, así que no puede inyectar HTML."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-inicio",
@@ -1064,6 +1162,15 @@ window.PROYECTOS = {
     "localStorage"
    ],
    "repo": "https://github.com/luisito2806/reproductor-musica",
+   "seguridad": {
+    "aplica": [
+     "Todo corre en el navegador; las canciones y favoritas no salen de él.",
+     "El nombre de usuario se muestra con textContent."
+    ],
+    "mejora": [
+     "La contraseña solo separa perfiles en el mismo navegador y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor."
+    ]
+   },
    "fotos": [
     {
      "archivo": "01-inicio",
@@ -1112,6 +1219,13 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/Pingpon",
    "demo": "https://luisito2806.github.io/Pingpon/",
+   "seguridad": {
+    "aplica": [
+     "El historial guardado se valida al cargarlo: si alguien lo altera en localStorage, los registros con formato inválido se descartan y el juego sigue funcionando.",
+     "El nombre del jugador se limita a 20 caracteres y se muestra con textContent."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-configuracion",
@@ -1153,6 +1267,13 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/nav-bars",
    "demo": "https://luisito2806.github.io/nav-bars/cotizador-web/",
+   "seguridad": {
+    "aplica": [
+     "Todo corre en el navegador, sin servidor ni datos guardados.",
+     "El nombre del cliente y el desglose se muestran con textContent; los números se convierten antes de calcular."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-formulario",
@@ -1284,6 +1405,15 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/localstorage",
    "demo": "https://luisito2806.github.io/localstorage/",
+   "seguridad": {
+    "aplica": [
+     "Las tareas solo viven en el navegador de quien las escribe; no se envían a ningún servidor.",
+     "No se guardan tareas vacías."
+    ],
+    "mejora": [
+     "El texto de cada tarea se pinta con innerHTML. Lo cambiaría por textContent para que una tarea no pueda inyectar HTML."
+    ]
+   },
    "fotos": [
     {
      "archivo": "01-tareas",
@@ -1489,6 +1619,16 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/minisuper",
    "demo": "https://minisuper-demo.onrender.com/",
    "demoNota": "Sign in with admin / Admin123! (or cajero / Cajero123!). Data resets on its own. It runs on a free server, so it may take about a minute to wake up.",
+   "seguridad": {
+    "aplica": [
+     "Passwords hashed with bcrypt. If the user doesn't exist, a dummy hash is compared so the response takes the same time and doesn't reveal which users exist.",
+     "Session in an httpOnly, SameSite=strict cookie that expires after 12 hours.",
+     "The server checks the role (admin or cashier) on every request; hiding a button is not the only protection.",
+     "Content-Security-Policy, X-Frame-Options and nosniff headers, and an API that only accepts JSON.",
+     "Queries through Sequelize (no hand-built SQL) and every sale in a transaction with row locks, so the till and inventory never end up half-saved."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-login",
@@ -1629,6 +1769,16 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/PW",
    "demo": "https://doo-barber.onrender.com/",
    "demoNota": "You can make a test booking. It runs on a free server, so it may take about a minute to wake up.",
+   "seguridad": {
+    "aplica": [
+     "Owner's password hashed with scrypt and a random salt, compared in constant time (timingSafeEqual).",
+     "After 5 failed attempts from the same IP, login is locked for 15 minutes.",
+     "Random 32-byte session token; only its SHA-256 hash is stored, and it expires after 7 days.",
+     "Each service price comes from the database, never from the browser, and the server rejects overlapping bookings.",
+     "escapeHtml on everything rendered, X-Frame-Options and nosniff headers, and a random cancellation code that cannot be guessed."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-reserva",
@@ -1742,6 +1892,15 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/1vs1",
    "demo": "https://duelo-ronin.onrender.com/",
    "demoNota": "Open it in two browsers or devices to fight; with one you can practice. It runs on a free server, so it may take about a minute to wake up.",
+   "seguridad": {
+    "aplica": [
+     "Authoritative server: physics, hits and health are computed on the server. The browser only reports which keys are pressed, so it cannot send “I won” or teleport the character.",
+     "Every player message is sanitized: only known buttons with a true/false value are accepted; anything else is dropped.",
+     "The 2-player limit is enforced on connect: a third visitor gets “Duel full” and never joins the room or receives the fight state.",
+     "The player ID is validated with a regular expression; if it is invalid, the server issues a new one with crypto.randomUUID."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-practica",
@@ -1816,6 +1975,17 @@ window.PROYECTOS = {
     "CSS"
    ],
    "repo": "https://github.com/luisito2806/TecnoAula",
+   "seguridad": {
+    "aplica": [
+     "Passwords with password_hash, and the session is regenerated on login (session_regenerate_id) to prevent session fixation.",
+     "Attempt limits: 5 per email and 20 per IP every 15 minutes.",
+     "CSRF token on every form, compared with hash_equals.",
+     "“Remember me” with a selector and validator generated with random_bytes, in an httpOnly, SameSite cookie; revoked when the user is disabled.",
+     "PDO prepared statements, and a 403 response if the role does not match the page.",
+     "Password reset gives the same response whether or not the email exists, the link lasts 1 hour, and config.php with the credentials stays out of the repository."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-login",
@@ -2006,6 +2176,16 @@ window.PROYECTOS = {
     "Sesiones"
    ],
    "repo": "https://github.com/luisito2806/Ambientes-web",
+   "seguridad": {
+    "aplica": [
+     "Passwords with password_hash and password_verify.",
+     "The session is regenerated on login and destroyed on logout.",
+     "The dashboard and the grades list redirect to login without a session, and each student only sees their own grades. The list used to open without a session: I found it reviewing my own code and fixed it.",
+     "Prepared mysqli statements to prevent SQL injection.",
+     "htmlspecialchars when rendering data, so nobody can inject HTML."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-login",
@@ -2034,8 +2214,8 @@ window.PROYECTOS = {
     {
      "archivo": "04-todas-las-calificaciones",
      "src": "img/galeria/calificaciones/04-todas-las-calificaciones.webp",
-     "pie": "General list of grades.",
-     "explicacion": "General list from the grades table, with every value escaped with htmlspecialchars.",
+     "pie": "Grades list (before the fix).",
+     "explicacion": "How the list looked before a security fix: it opened without a session and showed every student. It now requires a session and each student only sees their own grades. Every value is escaped with htmlspecialchars.",
      "w": 1240,
      "h": 420
     }
@@ -2060,6 +2240,14 @@ window.PROYECTOS = {
     "CSS"
    ],
    "repo": "https://github.com/luisito2806/Pokedex",
+   "seguridad": {
+    "aplica": [
+     "The PokéAPI is called from PHP: the browser never calls the external API directly.",
+     "The user's search goes through urlencode before reaching the API, so it can't change the request path.",
+     "The search term and data are rendered with htmlspecialchars, with no risk of HTML injection."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-charizard",
@@ -2121,6 +2309,14 @@ window.PROYECTOS = {
     "Formularios GET"
    ],
    "repo": "https://github.com/luisito2806/PHP-formulario",
+   "seguridad": {
+    "aplica": [
+     "Prices and products come from the server's array: if someone tampers with the form, unknown products are ignored and prices can't be changed.",
+     "The customer's name is rendered with htmlspecialchars.",
+     "It checks there is a name and at least one product before calculating."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-formulario",
@@ -2163,6 +2359,14 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/socket",
    "demo": "https://chat-tiempo-real-zwkv.onrender.com/",
    "demoNota": "Open it in two tabs or share the link to chat. It runs on a free server, so it may take about a minute to wake up.",
+   "seguridad": {
+    "aplica": [
+     "Messages are rendered with textContent, not as HTML: nobody can inject code into other people's chat.",
+     "The server trims names to 20 characters and messages to 500, and drops empty ones.",
+     "Only someone who has joined with a name can send messages; the server, not the browser, keeps the name and color."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-entrada",
@@ -2206,6 +2410,14 @@ window.PROYECTOS = {
    "repo": "https://github.com/luisito2806/IA-clima-",
    "demo": "https://lightship-weather.onrender.com/",
    "demoNota": "It runs on a free server, so it may take about a minute to wake up.",
+   "seguridad": {
+    "aplica": [
+     "Read-only API: it doesn't take user data or store anything.",
+     "The city in the URL is checked against an allow-list before reading from disk, so nobody can request “../something” to read files outside the data folder.",
+     "If the city doesn't exist it returns a JSON 404 with the available cities, without exposing internal errors."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-mexico",
@@ -2263,6 +2475,15 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/duolingo-matematico",
    "demo": "https://luisito2806.github.io/duolingo-matematico/",
+   "seguridad": {
+    "aplica": [
+     "Everything runs in the browser: there is no server or database to attack, and no data is sent anywhere.",
+     "Questions and options are rendered with textContent."
+    ],
+    "mejora": [
+     "The profile password only separates students on the same computer and is stored as-is in localStorage. In a real system it would be hashed on a server, as in Doo Barber."
+    ]
+   },
    "fotos": [
     {
      "archivo": "01-ruta",
@@ -2320,6 +2541,13 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/Tamagotchi-web",
    "demo": "https://luisito2806.github.io/Tamagotchi-web/",
+   "seguridad": {
+    "aplica": [
+     "Everything runs in the browser, with no server and no personal data.",
+     "The pet's name is limited to 12 characters and rendered with textContent, so it can't inject HTML."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-inicio",
@@ -2368,6 +2596,15 @@ window.PROYECTOS = {
     "localStorage"
    ],
    "repo": "https://github.com/luisito2806/reproductor-musica",
+   "seguridad": {
+    "aplica": [
+     "Everything runs in the browser; songs and favorites never leave it.",
+     "The username is rendered with textContent."
+    ],
+    "mejora": [
+     "The password only separates profiles in the same browser and is stored as-is in localStorage. In a real system it would be hashed on a server."
+    ]
+   },
    "fotos": [
     {
      "archivo": "01-inicio",
@@ -2416,6 +2653,13 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/Pingpon",
    "demo": "https://luisito2806.github.io/Pingpon/",
+   "seguridad": {
+    "aplica": [
+     "Saved history is validated on load: if someone tampers with it in localStorage, malformed records are dropped and the game keeps working.",
+     "The player's name is limited to 20 characters and rendered with textContent."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-configuracion",
@@ -2457,6 +2701,13 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/nav-bars",
    "demo": "https://luisito2806.github.io/nav-bars/cotizador-web/",
+   "seguridad": {
+    "aplica": [
+     "Everything runs in the browser, with no server and no stored data.",
+     "The customer's name and the breakdown are rendered with textContent; numbers are parsed before calculating."
+    ],
+    "mejora": []
+   },
    "fotos": [
     {
      "archivo": "01-formulario",
@@ -2588,6 +2839,15 @@ window.PROYECTOS = {
    ],
    "repo": "https://github.com/luisito2806/localstorage",
    "demo": "https://luisito2806.github.io/localstorage/",
+   "seguridad": {
+    "aplica": [
+     "Tasks only live in the writer's browser; they're never sent to a server.",
+     "Empty tasks are not saved."
+    ],
+    "mejora": [
+     "Each task's text is rendered with innerHTML. I'd switch to textContent so a task can't inject HTML."
+    ]
+   },
    "fotos": [
     {
      "archivo": "01-tareas",

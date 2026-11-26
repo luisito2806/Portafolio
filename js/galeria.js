@@ -51,6 +51,20 @@
     }
     partes.push(el('h2', { class: 'subtitulo-aportes' }, T.queHice), lista);
   }
+  if (proyecto.seguridad) {
+    const lista = (items, clase) => {
+      const ul = el('ul', clase ? { class: clase } : {});
+      for (const x of items) ul.append(el('li', {}, x));
+      return ul;
+    };
+    const bloque = el('section', { class: 'seguridad-galeria', 'aria-label': T.seguridad },
+      el('h2', { class: 'subtitulo-aportes' }, T.seguridad),
+      lista(proyecto.seguridad.aplica));
+    if (proyecto.seguridad.mejora.length) {
+      bloque.append(el('p', { class: 'mejora-titulo' }, T.mejoraria), lista(proyecto.seguridad.mejora, 'mejoras'));
+    }
+    partes.push(bloque);
+  }
   const tecnologias = el('ul', { class: 'tecnologias' });
   for (const t of proyecto.tecnologias) tecnologias.append(el('li', {}, t));
   partes.push(tecnologias);

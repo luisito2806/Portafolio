@@ -197,7 +197,7 @@ module.exports = [
       ['01-login', 'Inicio de sesión.'],
       ['02-registro', 'Registro con número de control.'],
       ['03-panel', 'Panel del alumno con sus datos y calificaciones.'],
-      ['04-todas-las-calificaciones', 'Lista general de calificaciones.'],
+      ['04-todas-las-calificaciones', 'Lista de calificaciones (antes de la corrección).'],
     ],
   },
   {

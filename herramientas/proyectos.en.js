@@ -172,7 +172,7 @@ module.exports = {
       '01-login': ['Sign-in.', 'Looks up the user by email with a prepared statement and checks the password with password_verify. If it matches, their id is stored in the PHP session.'],
       '02-registro': ['Sign-up with student ID.', 'Before signing up it checks that the student ID and email are not taken. The password is stored with password_hash, never in plain text.'],
       '03-panel': ['Student dashboard with details and grades.', 'The dashboard only opens with an active session; otherwise it redirects to sign-in. Data and grades are queried with the session id, so each student only sees their own.'],
-      '04-todas-las-calificaciones': ['General list of grades.', 'General list from the grades table, with every value escaped with htmlspecialchars.'],
+      '04-todas-las-calificaciones': ['Grades list (before the fix).', 'How the list looked before a security fix: it opened without a session and showed every student. It now requires a session and each student only sees their own grades. Every value is escaped with htmlspecialchars.'],
     },
   },
 

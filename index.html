@@ -52,7 +52,7 @@
       </div>
 
       <div class="presentacion">
-        <p class="kicker"><span aria-hidden="true">&gt;_</span> Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad</p>
+        <p class="kicker"><span aria-hidden="true">&gt;<i class="cursor">_</i></span> Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad</p>
         <h1>Luis Angel Vazquez Estrada</h1>
         <p class="lema">Construyo sistemas web completos y me aseguro de que sean seguros.</p>
         <p class="resumen">Estudiante de Ingeniería en Sistemas Computacionales y Ciberseguridad en la UVAQ. Hago sistemas con base de datos, aplicaciones en tiempo real y juegos, cuidando la seguridad desde el inicio de sesión hasta la base de datos.</p>
@@ -145,6 +145,18 @@
               <li><strong>Pensado para la tienda:</strong> respaldo automático diario, copia a USB e instalador que deja el sistema arrancando solo en Windows.</li>
               <li>Pruebas automáticas de la API, la base de datos, los cálculos de dinero y la sincronización.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>5 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>Contraseñas con bcrypt. Si el usuario no existe se compara contra un hash falso, para que la respuesta tarde lo mismo y no revele qué usuarios hay.</li>
+                  <li>Sesión en una cookie httpOnly y SameSite=strict que caduca a las 12 horas.</li>
+                  <li>El servidor revisa el rol (administrador o cajero) en cada petición; esconder un botón no es lo único que protege.</li>
+                  <li>Cabeceras Content-Security-Policy, X-Frame-Options y nosniff, y una API que solo acepta JSON.</li>
+                  <li>Consultas con Sequelize (sin SQL armado a mano) y cada venta en una transacción con bloqueo de filas, para que caja e inventario nunca queden a medias.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>Sequelize</li><li>PostgreSQL</li><li>ExcelJS</li><li>PowerShell</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=minisuper">Ver galería · 14 fotos →</a>
@@ -175,6 +187,18 @@
               <li>Avisos por WhatsApp con mensajes precargados.</li>
               <li>Lo trabajé por secciones, cada una en su propia rama y pull request.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>5 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>Contraseña del dueño con scrypt y sal aleatoria, comparada en tiempo constante (timingSafeEqual).</li>
+                  <li>Después de 5 intentos fallidos desde la misma IP, el acceso se bloquea 15 minutos.</li>
+                  <li>Token de sesión aleatorio de 32 bytes; en la base solo se guarda su hash SHA-256 y caduca a los 7 días.</li>
+                  <li>El precio de cada servicio sale de la base de datos, nunca del navegador, y el servidor rechaza citas que se empalman.</li>
+                  <li>escapeHtml en todo lo que se pinta, cabeceras X-Frame-Options y nosniff, y un código de cancelación aleatorio que no se puede adivinar.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>SQLite</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=doo-barber">Ver galería · 11 fotos →</a>
@@ -201,6 +225,17 @@
               <li>Rondas, cuenta regresiva, revancha y modo práctica contra un costal mientras llega el rival.</li>
               <li>32 pruebas automáticas de la lógica del juego y de la conexión.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>4 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>Servidor autoritativo: la física, los golpes y la vida se calculan en el servidor. El navegador solo dice qué teclas están presionadas, así que no puede mandar “gané” ni mover al personaje a otra parte.</li>
+                  <li>Cada mensaje del jugador se limpia: solo se aceptan los botones conocidos con valor verdadero o falso; todo lo demás se descarta.</li>
+                  <li>El cupo de 2 se decide al conectarse: un tercer visitante recibe “Duelo lleno” y nunca entra a la sala ni recibe el estado de la pelea.</li>
+                  <li>El identificador del jugador se valida con una expresión regular; si no es válido, el servidor genera uno nuevo con crypto.randomUUID.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>Node.js</li><li>Socket.IO</li><li>Canvas</li><li>JavaScript</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=duelo-ronin">Ver galería · 6 fotos →</a>
@@ -235,6 +270,19 @@
               <li>Reportes de avance y calificaciones por curso.</li>
               <li>Las credenciales de la base de datos quedan fuera del repositorio.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>6 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>Contraseñas con password_hash y la sesión se regenera al entrar (session_regenerate_id) para evitar fijación de sesión.</li>
+                  <li>Límite de intentos: 5 por correo y 20 por IP cada 15 minutos.</li>
+                  <li>Token CSRF en cada formulario, comparado con hash_equals.</li>
+                  <li>“Recordarme” con selector y validador generados con random_bytes, en cookie httpOnly y SameSite; se revocan al desactivar al usuario.</li>
+                  <li>PDO con consultas preparadas, y respuesta 403 si el rol no corresponde a la página.</li>
+                  <li>La recuperación de contraseña responde igual exista o no el correo, el enlace dura 1 hora y config.php con las credenciales queda fuera del repositorio.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>PHP</li><li>MySQL</li><li>PDO</li><li>JavaScript</li><li>CSS</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=tecnoaula">Ver galería · 21 fotos →</a>
@@ -249,7 +297,7 @@
               <img src="img/galeria/calificaciones/03-panel.webp" alt="Portal de calificaciones: Panel del alumno con sus datos y calificaciones." width="1366" height="820" loading="lazy">
             </a>
             <a class="captura" href="galeria.html?p=calificaciones#foto-4" aria-label="Ver Portal de calificaciones en la galería, foto 4">
-              <img src="img/galeria/calificaciones/04-todas-las-calificaciones.webp" alt="Portal de calificaciones: Lista general de calificaciones." width="1240" height="420" loading="lazy">
+              <img src="img/galeria/calificaciones/04-todas-las-calificaciones.webp" alt="Portal de calificaciones: Lista de calificaciones (antes de la corrección)." width="1240" height="420" loading="lazy">
             </a>
           </div>
           <div>
@@ -262,6 +310,18 @@
               <li>Consultas preparadas para evitar inyección SQL.</li>
               <li>Panel del alumno con sus datos y la tabla de calificaciones.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>5 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>Contraseñas con password_hash y password_verify.</li>
+                  <li>La sesión se regenera al iniciar sesión y se destruye al salir.</li>
+                  <li>El panel y la lista de calificaciones redirigen al login si no hay sesión, y cada alumno solo ve sus propias calificaciones. La lista antes se abría sin sesión: lo encontré revisando mi código y lo corregí.</li>
+                  <li>Consultas preparadas con mysqli para evitar inyección SQL.</li>
+                  <li>htmlspecialchars al mostrar los datos, para que nadie pueda inyectar HTML.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>PHP</li><li>MySQL</li><li>Sesiones</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=calificaciones">Ver galería · 4 fotos →</a>
@@ -289,6 +349,16 @@
               <li>Estadísticas base con barras de colores.</li>
               <li>Catálogo de los primeros Pokémon para elegir sin escribir.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>La PokéAPI se consulta desde PHP: el navegador nunca llama a la API externa directamente.</li>
+                  <li>Lo que escribe el usuario pasa por urlencode antes de ir a la API, así no puede cambiar la ruta de la petición.</li>
+                  <li>La búsqueda y los datos se muestran con htmlspecialchars, sin riesgo de inyectar HTML.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>PHP</li><li>API REST</li><li>CSS</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=pokedex">Ver galería · 5 fotos →</a>
@@ -315,6 +385,16 @@
               <li>Validación del nombre y de que haya productos elegidos.</li>
               <li>Subtotal, 10 % de descuento en compras de más de $500 y total a pagar.</li>
             </ul>
+            <details class="seguridad-proyecto">
+              <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
+              <div class="contenido-seguridad">
+                <ul>
+                  <li>El precio y los productos salen del arreglo del servidor: si alguien altera el formulario, los productos que no existen se ignoran y el precio no se puede cambiar.</li>
+                  <li>El nombre del cliente se muestra con htmlspecialchars.</li>
+                  <li>Se valida que haya nombre y al menos un producto antes de calcular.</li>
+                </ul>
+              </div>
+            </details>
             <ul class="tecnologias"><li>PHP</li><li>HTML</li><li>Formularios GET</li></ul>
             <div class="enlaces">
               <a class="ver-galeria" href="galeria.html?p=catalogo">Ver galería · 3 fotos →</a>
@@ -335,6 +415,16 @@
             <div class="cuerpo">
               <h3>Chat en tiempo real</h3>
               <p>Chat donde cada persona entra con su nombre y recibe un color. Muestra quién está conectado y avisa cuando alguien entra o sale. Los mensajes se limpian y se limitan en el servidor.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>Los mensajes se pintan con textContent, no como HTML: nadie puede inyectar código en el chat de los demás.</li>
+                    <li>El servidor recorta el nombre a 20 caracteres y cada mensaje a 500, y descarta los vacíos.</li>
+                    <li>Solo puede mandar mensajes quien ya se registró con un nombre; el nombre y el color los guarda el servidor, no el navegador.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>Socket.IO</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=chat-socket">Ver galería · 3 fotos →</a>
@@ -352,6 +442,16 @@
             <div class="cuerpo">
               <h3>Lightship Weather</h3>
               <p>API de clima que lee la información de cada ciudad desde archivos Markdown. El servidor con Express expone /api/clima/:ciudad y la página lo consume para mostrar el clima de cada ciudad con tarjetas.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>API de solo lectura: no recibe datos del usuario ni guarda nada.</li>
+                    <li>La ciudad de la URL se valida contra una lista blanca antes de leer el disco, así nadie puede pedir “../algo” para leer archivos fuera de la carpeta de datos.</li>
+                    <li>Si la ciudad no existe responde 404 en JSON con la lista de ciudades disponibles, sin mostrar errores internos.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>Node.js</li><li>Express</li><li>API REST</li><li>Tailwind CSS</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=lightship-weather">Ver galería · 5 fotos →</a>
@@ -369,6 +469,19 @@
             <div class="cuerpo">
               <h3>DuoMath</h3>
               <p>Plataforma para practicar matemáticas de 6.º de primaria. Inspirada en las apps de idiomas: lecciones de 20 preguntas por módulo, con puntos de experiencia, coronas y vidas.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>Todo corre en el navegador: no hay servidor ni base de datos que atacar, y no se envían datos a ningún lado.</li>
+                    <li>Las preguntas y opciones se pintan con textContent.</li>
+                  </ul>
+                  <p class="mejora-titulo">Lo que mejoraría</p>
+                  <ul class="mejoras">
+                    <li>La clave del perfil solo separa a los alumnos que usan la misma computadora y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor, como en Doo Barber.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=duomath">Ver galería · 5 fotos →</a>
@@ -385,6 +498,15 @@
             <div class="cuerpo">
               <h3>Bio-Terminal</h3>
               <p>Mascota virtual con estética de terminal. Hay que mantenerla viva 24 horas simuladas (1 hora = 6 segundos) alimentándola, jugando y limpiándola. Tiene tres niveles de dificultad.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>Todo corre en el navegador, sin servidor ni datos personales.</li>
+                    <li>El nombre de la mascota se limita a 12 caracteres y se muestra con textContent, así que no puede inyectar HTML.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=bio-terminal">Ver galería · 4 fotos →</a>
@@ -401,6 +523,19 @@
             <div class="cuerpo">
               <h3>Reproductor de música</h3>
               <p>Reproductor con cuentas de usuario y canciones favoritas. Lista de canciones, aleatorio, repetir, barra de avance y volumen. Cada usuario inicia sesión y guarda sus favoritas en el navegador.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>Todo corre en el navegador; las canciones y favoritas no salen de él.</li>
+                    <li>El nombre de usuario se muestra con textContent.</li>
+                  </ul>
+                  <p class="mejora-titulo">Lo que mejoraría</p>
+                  <ul class="mejoras">
+                    <li>La contraseña solo separa perfiles en el mismo navegador y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>JavaScript</li><li>Audio API</li><li>localStorage</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=reproductor">Ver galería · 4 fotos →</a>
@@ -416,6 +551,15 @@
             <div class="cuerpo">
               <h3>Pong vs Pared</h3>
               <p>Pong de un jugador contra la pared. Se eligen teclas, colores, puntos por golpe y velocidad. Cada 5 golpes sube el nivel, y se guardan los 3 mejores resultados.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>El historial guardado se valida al cargarlo: si alguien lo altera en localStorage, los registros con formato inválido se descartan y el juego sigue funcionando.</li>
+                    <li>El nombre del jugador se limita a 20 caracteres y se muestra con textContent.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>JavaScript</li><li>Canvas</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=pong">Ver galería · 3 fotos →</a>
@@ -432,6 +576,15 @@
             <div class="cuerpo">
               <h3>Cotizador web</h3>
               <p>Calcula cuánto cuesta un sitio web. Según el número de páginas y los servicios extra (dominio, hosting, base de datos, SEO). Acepta cupones de descuento y muestra el desglose con IVA.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>Todo corre en el navegador, sin servidor ni datos guardados.</li>
+                    <li>El nombre del cliente y el desglose se muestran con textContent; los números se convierten antes de calcular.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=cotizador">Ver galería · 3 fotos →</a>
@@ -489,6 +642,19 @@
             <div class="cuerpo">
               <h3>Lista de tareas</h3>
               <p>Lista de tareas que se guarda en el navegador. Agregar, marcar como hecha y borrar, sin perder nada al recargar la página.</p>
+              <details class="seguridad-proyecto">
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <div class="contenido-seguridad">
+                  <ul>
+                    <li>Las tareas solo viven en el navegador de quien las escribe; no se envían a ningún servidor.</li>
+                    <li>No se guardan tareas vacías.</li>
+                  </ul>
+                  <p class="mejora-titulo">Lo que mejoraría</p>
+                  <ul class="mejoras">
+                    <li>El texto de cada tarea se pinta con innerHTML. Lo cambiaría por textContent para que una tarea no pueda inyectar HTML.</li>
+                  </ul>
+                </div>
+              </details>
               <ul class="tecnologias"><li>JavaScript</li><li>localStorage</li></ul>
               <div class="enlaces">
                 <a class="ver-galeria" href="galeria.html?p=lista-tareas">Ver galería · 2 fotos →</a>

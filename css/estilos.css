@@ -232,6 +232,10 @@ h2 {
   font-size: 0.8rem;
 }
 
+.kicker .cursor {
+  font-style: normal;
+}
+
 .kicker span {
   color: var(--acento);
   font-weight: 700;
@@ -1344,4 +1348,235 @@ footer {
   margin-top: 8px;
   color: var(--texto-suave);
   font-size: 0.85rem;
+}
+
+/* ── Seguridad de cada proyecto ──────────────────────────────── */
+.seguridad-proyecto {
+  margin-top: 16px;
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--acento);
+  border-radius: 8px;
+  background: var(--superficie);
+  font-size: 0.9rem;
+}
+
+.seguridad-proyecto summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--texto);
+  font-weight: 600;
+  user-select: none;
+}
+
+.seguridad-proyecto summary::-webkit-details-marker {
+  display: none;
+}
+
+.seguridad-proyecto summary small {
+  color: var(--texto-suave);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* Flecha que gira al abrir */
+.seguridad-proyecto summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-left: auto;
+  border-right: 2px solid var(--texto-suave);
+  border-bottom: 2px solid var(--texto-suave);
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.25s ease;
+}
+
+.seguridad-proyecto[open] summary::after {
+  transform: rotate(225deg) translateY(-2px);
+}
+
+.seguridad-proyecto summary:hover {
+  color: var(--acento);
+}
+
+.seguridad-proyecto summary:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.candado {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--acento);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.contenido-seguridad {
+  padding: 0 14px 12px;
+  color: var(--texto-suave);
+}
+
+.seguridad-proyecto[open] .contenido-seguridad {
+  animation: desplegar 0.3s ease both;
+}
+
+.contenido-seguridad ul,
+.seguridad-galeria ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.contenido-seguridad li + li,
+.seguridad-galeria li + li {
+  margin-top: 4px;
+}
+
+.mejora-titulo {
+  margin-top: 10px;
+  color: var(--texto);
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mejoras {
+  list-style: "→  ";
+}
+
+/* En la galería el apartado va abierto */
+.seguridad-galeria {
+  margin-top: 8px;
+  padding: 4px 20px 16px;
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--acento);
+  border-radius: 10px;
+  background: var(--superficie);
+  color: var(--texto-suave);
+}
+
+/* ── Animaciones ─────────────────────────────────────────────── */
+@keyframes desplegar {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes entrar {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes entrar-foto {
+  from { opacity: 0; transform: translateY(16px) scale(0.96); box-shadow: 0 0 0 var(--acento-suave), 0 0 0 1px var(--acento); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes barrer-rejilla {
+  from { opacity: 0; transform: scale(1.04); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes parpadeo {
+  50% { opacity: 0; }
+}
+
+@keyframes progreso {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Entrada de la portada: cada pieza llega un poco después de la anterior */
+  .encabezado::before {
+    animation: barrer-rejilla 1.2s ease both;
+  }
+
+  .encabezado .foto {
+    animation: entrar-foto 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .presentacion > *,
+  .cabecera-galeria > *,
+  .volver {
+    animation: entrar 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .presentacion > :nth-child(1) { animation-delay: 0.1s; }
+  .presentacion > :nth-child(2) { animation-delay: 0.18s; }
+  .presentacion > :nth-child(3) { animation-delay: 0.26s; }
+  .presentacion > :nth-child(4) { animation-delay: 0.34s; }
+  .presentacion > :nth-child(5) { animation-delay: 0.42s; }
+  .presentacion > :nth-child(6) { animation-delay: 0.5s; }
+  .cabecera-galeria > :nth-child(2) { animation-delay: 0.06s; }
+  .cabecera-galeria > :nth-child(3) { animation-delay: 0.12s; }
+  .cabecera-galeria > :nth-child(4) { animation-delay: 0.18s; }
+  .cabecera-galeria > :nth-child(n + 5) { animation-delay: 0.24s; }
+
+  /* El "_" de la etiqueta parpadea como un cursor de terminal */
+  .kicker .cursor {
+    animation: parpadeo 1.1s steps(1) infinite;
+  }
+
+  /* Bloques que aparecen al deslizar (sitio.js pone las clases) */
+  html .revelar {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s ease var(--retraso, 0ms),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--retraso, 0ms);
+  }
+
+  html .destacado.revelar {
+    transform: translateY(40px);
+  }
+
+  html .revelar.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Proyectos que quedan al usar un filtro */
+  .aparecer {
+    animation: entrar 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  /* Tarjetas que se elevan al pasar el cursor */
+  .tarjeta,
+  .practica {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .tarjeta:hover,
+  .practica:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px -16px rgb(0 0 0 / 0.35);
+  }
+
+  .tarjeta:hover {
+    border-color: color-mix(in srgb, var(--acento) 45%, var(--borde));
+  }
+
+  /* Barra de avance de lectura bajo el menú */
+  @supports (animation-timeline: scroll()) {
+    .barra::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 2px;
+      background: var(--acento);
+      transform-origin: left;
+      animation: progreso linear both;
+      animation-timeline: scroll(root);
+    }
+  }
 }

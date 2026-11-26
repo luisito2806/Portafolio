@@ -13,6 +13,7 @@ Las páginas (`index.html`, `galeria.html`, `cv.html` y sus versiones en inglés
    | `proyectos.en.js` | La traducción al inglés de cada proyecto y de cada foto |
    | `explicaciones.js` | La explicación en español de cada foto de las galerías |
    | `seguridad.js` | La sección “Seguridad en mis proyectos” |
+   | `seguridad-proyectos.js` | El apartado “Seguridad” de cada proyecto: lo que aplica y lo que mejoraría |
 
 2. En la carpeta del portafolio ejecuta:
 

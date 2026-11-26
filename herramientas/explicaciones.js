@@ -88,7 +88,7 @@ module.exports = {
     '01-login': 'Busca al usuario por correo con una consulta preparada y compara la contraseña con password_verify. Si coincide, guarda su id en la sesión de PHP.',
     '02-registro': 'Antes de registrar revisa que el número de control y el correo no existan. La contraseña se guarda con password_hash, nunca en texto plano.',
     '03-panel': 'El panel solo abre con sesión iniciada: si no la hay, redirige al login. Los datos y las calificaciones se consultan con el id de la sesión, así cada alumno ve solo lo suyo.',
-    '04-todas-las-calificaciones': 'Lista general de la tabla de calificaciones, con cada texto escapado con htmlspecialchars.',
+    '04-todas-las-calificaciones': 'Así se veía la lista antes de una corrección de seguridad: se abría sin sesión y mostraba a todos los alumnos. Ahora pide sesión y cada alumno ve solo sus calificaciones. Cada texto se escapa con htmlspecialchars.',
   },
 
   pokedex: {

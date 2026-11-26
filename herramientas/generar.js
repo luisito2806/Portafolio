@@ -4,7 +4,8 @@
 //
 // Escribe: index.html, galeria.html, cv.html (español), en/index.html, en/galeria.html,
 // en/cv.html (inglés) y js/proyectos.js. No edites esas páginas a mano: edita
-// perfil.js, proyectos.js, proyectos.en.js, explicaciones.js o seguridad.js y vuelve a generar.
+// perfil.js, proyectos.js, proyectos.en.js, explicaciones.js, seguridad.js o
+// seguridad-proyectos.js y vuelve a generar.
 
 const fs = require('fs');
 const path = require('path');
@@ -15,6 +16,7 @@ const proyectosEs = require('./proyectos.js');
 const proyectosEn = require('./proyectos.en.js');
 const explicaciones = require('./explicaciones.js');
 const seguridad = require('./seguridad.js');
+const seguridadProyectos = require('./seguridad-proyectos.js');
 const medidas = require('./medidas.json');
 
 // ── Textos fijos de la interfaz ──────────────────────────────────────────────
@@ -48,6 +50,9 @@ const UI = {
     seguridad: 'Seguridad en mis proyectos',
     introSeguridad: 'Estudio ciberseguridad, así que la aplico en lo que construyo. Estas son las prácticas que uso; cada enlace lleva a la pantalla donde se ve en funcionamiento.',
     dondeLoApliqué: 'Dónde lo apliqué',
+    seguridadProyecto: 'Seguridad',
+    medidas: (n) => `${n} ${n === 1 ? 'medida' : 'medidas'}`,
+    mejoraria: 'Lo que mejoraría',
     formacion: 'Formación',
     habilidades: 'Habilidades',
     introHabilidades: 'Las tecnologías que he usado en los proyectos de arriba.',
@@ -114,6 +119,9 @@ const UI = {
     seguridad: 'Security in my projects',
     introSeguridad: "I study cybersecurity, so I apply it to what I build. These are the practices I use; each link opens the screen where you can see it at work.",
     dondeLoApliqué: 'Where I applied it',
+    seguridadProyecto: 'Security',
+    medidas: (n) => `${n} ${n === 1 ? 'measure' : 'measures'}`,
+    mejoraria: "What I'd improve",
     formacion: 'Education',
     habilidades: 'Skills',
     introHabilidades: "The technologies I've used in the projects above.",
@@ -171,6 +179,16 @@ function escribir(rel, contenido) {
 
 // ── Datos de proyectos por idioma ────────────────────────────────────────────
 const faltan = [];
+// Apartado de seguridad de un proyecto en el idioma pedido (undefined si no tiene)
+function seguridadDe(slug, lang) {
+  const s = seguridadProyectos[slug];
+  if (!s) return undefined;
+  const lista = (items = []) => items.map((x) => {
+    if (!x[lang]) faltan.push(`traducción de la seguridad de ${slug}`);
+    return x[lang] || x.es;
+  });
+  return { aplica: lista(s.aplica), mejora: lista(s.mejora) };
+}
 function proyectos(lang) {
   return proyectosEs.map((p) => {
     const en = proyectosEn[p.slug] || {};
@@ -188,6 +206,7 @@ function proyectos(lang) {
       repoTexto: lang === 'en' ? en.repoTexto || p.repoTexto : p.repoTexto,
       demo: p.demo,
       demoNota: p.demo ? pick('demoNota') : undefined,
+      seguridad: seguridadDe(p.slug, lang),
       fotos: p.fotos.map(([f, pie]) => {
         const clave = `${p.slug}/${f}.webp`;
         if (!medidas[clave]) faltan.push(`medidas de ${clave}`);
@@ -302,6 +321,25 @@ ${s}</a>`;
     return `${s}<div class="enlaces">\n${partes.map((x) => `${s}  ${x}`).join('\n')}\n${s}</div>${nota}`;
   }
   const tecs = (p) => `<ul class="tecnologias">${p.tecnologias.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
+  // Apartado plegable con la seguridad del proyecto
+  const candado = '<svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>';
+  function segProyecto(p, s) {
+    if (!p.seguridad) return '';
+    const { aplica, mejora } = p.seguridad;
+    const li = (x) => `${s}      <li>${esc(x)}</li>`;
+    const mejoras = mejora.length
+      ? `${s}    <p class="mejora-titulo">${ui.mejoraria}</p>\n${s}    <ul class="mejoras">\n${mejora.map(li).join('\n')}\n${s}    </ul>\n`
+      : '';
+    return `${s}<details class="seguridad-proyecto">
+${s}  <summary>${candado}<span>${ui.seguridadProyecto}</span><small>${ui.medidas(aplica.length)}</small></summary>
+${s}  <div class="contenido-seguridad">
+${s}    <ul>
+${aplica.map(li).join('\n')}
+${s}    </ul>
+${mejoras}${s}  </div>
+${s}</details>
+`;
+  }
 
   function destacado(slug, portadas, telefonos = false) {
     const p = P[slug];
@@ -317,7 +355,7 @@ ${s}  <div>
 ${p.etiqueta ? `${s}    <span class="etiqueta-equipo">${esc(p.etiqueta)}</span>\n` : ''}${s}    <h3>${esc(p.titulo)}</h3>
 ${s}    <p class="que-es">${esc(p.queEs)}</p>
 ${s}    <p>${esc(p.descripcion[0])}</p>
-${p.aportes ? `${s}    <ul class="aportes">\n${p.aportes.map((a) => `${s}      <li>${aporte(a)}</li>`).join('\n')}\n${s}    </ul>\n` : ''}${s}    ${tecs(p)}
+${p.aportes ? `${s}    <ul class="aportes">\n${p.aportes.map((a) => `${s}      <li>${aporte(a)}</li>`).join('\n')}\n${s}    </ul>\n` : ''}${segProyecto(p, s + '    ')}${s}    ${tecs(p)}
 ${enlaces(p, s + '    ')}
 ${s}  </div>
 ${s}</article>`;
@@ -333,7 +371,7 @@ ${medios}
 ${s}  <div class="cuerpo">
 ${s}    <h3>${esc(p.titulo)}</h3>
 ${s}    <p>${esc(p.queEs)} ${esc(p.descripcion[0])}</p>
-${s}    ${tecs(p)}
+${segProyecto(p, s + '    ')}${s}    ${tecs(p)}
 ${enlaces(p, s + '    ', true)}
 ${s}  </div>
 ${s}</article>`;
@@ -418,7 +456,7 @@ ${nav({ ui, inicio: '', otraUrl: lang === 'es' ? 'en/' : '../' })}
       </div>
 
       <div class="presentacion">
-        <p class="kicker"><span aria-hidden="true">&gt;_</span> ${esc(t(perfil.titulo, lang))}</p>
+        <p class="kicker"><span aria-hidden="true">&gt;<i class="cursor">_</i></span> ${esc(t(perfil.titulo, lang))}</p>
         <h1>${esc(perfil.nombre)}</h1>
         <p class="lema">${esc(t(perfil.lema, lang))}</p>
         <p class="resumen">${esc(t(perfil.resumen, lang))}</p>
@@ -484,7 +522,7 @@ function paginaGaleria(lang) {
   const ui = UI[lang];
   const g = ui.galeria;
   const base = lang === 'es' ? '' : '../';
-  const textos = { ...g, capturas: undefined, ampliar: undefined, queHice: g.queHice, verVivo: ui.verVivo, codigoGithub: ui.codigoGithub };
+  const textos = { ...g, capturas: undefined, ampliar: undefined, queHice: g.queHice, verVivo: ui.verVivo, codigoGithub: ui.codigoGithub, seguridad: ui.seguridadProyecto, mejoraria: ui.mejoraria };
   return `${cabeza({ lang, base, titulo: `${g.titulo} | ${perfil.nombre}`, descripcion: t(perfil.resumen, lang), ruta: (lang === 'es' ? '' : 'en/') + 'galeria.html' })}
 <body>
 ${nav({ ui, inicio: 'index.html', otraUrl: lang === 'es' ? 'en/galeria.html' : '../galeria.html', idOtro: ' id="otro-idioma"' })}
