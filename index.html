@@ -470,15 +470,16 @@
               <h3>DuoMath</h3>
               <p>Plataforma para practicar matemáticas de 6.º de primaria. Inspirada en las apps de idiomas: lecciones de 20 preguntas por módulo, con puntos de experiencia, coronas y vidas.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Todo corre en el navegador: no hay servidor ni base de datos que atacar, y no se envían datos a ningún lado.</li>
                     <li>Las preguntas y opciones se pintan con textContent.</li>
+                    <li>La clave de cada perfil se guarda como hash PBKDF2-SHA256 con sal aleatoria (Web Crypto), nunca en texto plano. Antes se guardaba tal cual: lo corregí, y las cuentas viejas se convierten solas al entrar.</li>
                   </ul>
                   <p class="mejora-titulo">Lo que mejoraría</p>
                   <ul class="mejoras">
-                    <li>La clave del perfil solo separa a los alumnos que usan la misma computadora y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor, como en Doo Barber.</li>
+                    <li>Sin servidor, quien use ese navegador puede alterar o borrar el progreso. Para algo con calificaciones reales lo movería a un servidor, como en Doo Barber.</li>
                   </ul>
                 </div>
               </details>
@@ -524,15 +525,16 @@
               <h3>Reproductor de música</h3>
               <p>Reproductor con cuentas de usuario y canciones favoritas. Lista de canciones, aleatorio, repetir, barra de avance y volumen. Cada usuario inicia sesión y guarda sus favoritas en el navegador.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Todo corre en el navegador; las canciones y favoritas no salen de él.</li>
                     <li>El nombre de usuario se muestra con textContent.</li>
+                    <li>La contraseña se guarda como hash PBKDF2-SHA256 con sal aleatoria (Web Crypto), nunca en texto plano. Antes se guardaba tal cual: lo corregí, y las cuentas viejas se convierten solas al entrar.</li>
                   </ul>
                   <p class="mejora-titulo">Lo que mejoraría</p>
                   <ul class="mejoras">
-                    <li>La contraseña solo separa perfiles en el mismo navegador y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor.</li>
+                    <li>Sin servidor, quien use ese navegador puede alterar o borrar los favoritos. Para cuentas reales lo movería a un servidor.</li>
                   </ul>
                 </div>
               </details>

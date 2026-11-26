@@ -470,15 +470,16 @@
               <h3>DuoMath</h3>
               <p>Platform to practice 6th-grade math. Inspired by language-learning apps: 20-question lessons per module, with experience points, crowns and lives.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>2 measures</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>3 measures</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Everything runs in the browser: there is no server or database to attack, and no data is sent anywhere.</li>
                     <li>Questions and options are rendered with textContent.</li>
+                    <li>Each profile password is stored as a PBKDF2-SHA256 hash with a random salt (Web Crypto), never in plain text. It used to be stored as-is: I fixed it, and old accounts are converted automatically on login.</li>
                   </ul>
                   <p class="mejora-titulo">What I'd improve</p>
                   <ul class="mejoras">
-                    <li>The profile password only separates students on the same computer and is stored as-is in localStorage. In a real system it would be hashed on a server, as in Doo Barber.</li>
+                    <li>Without a server, anyone using that browser can alter or erase the progress. For real grades I would move it to a server, as in Doo Barber.</li>
                   </ul>
                 </div>
               </details>
@@ -524,15 +525,16 @@
               <h3>Reproductor de música</h3>
               <p>Music player with user accounts and favorite songs. Song list, shuffle, repeat, progress bar and volume. Each user signs in and keeps their favorites in the browser.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>2 measures</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>3 measures</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Everything runs in the browser; songs and favorites never leave it.</li>
                     <li>The username is rendered with textContent.</li>
+                    <li>The password is stored as a PBKDF2-SHA256 hash with a random salt (Web Crypto), never in plain text. It used to be stored as-is: I fixed it, and old accounts are converted automatically on login.</li>
                   </ul>
                   <p class="mejora-titulo">What I'd improve</p>
                   <ul class="mejoras">
-                    <li>The password only separates profiles in the same browser and is stored as-is in localStorage. In a real system it would be hashed on a server.</li>
+                    <li>Without a server, anyone using that browser can alter or erase the favorites. For real accounts I would move it to a server.</li>
                   </ul>
                 </div>
               </details>

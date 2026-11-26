@@ -1044,10 +1044,11 @@ window.PROYECTOS = {
    "seguridad": {
     "aplica": [
      "Todo corre en el navegador: no hay servidor ni base de datos que atacar, y no se envían datos a ningún lado.",
-     "Las preguntas y opciones se pintan con textContent."
+     "Las preguntas y opciones se pintan con textContent.",
+     "La clave de cada perfil se guarda como hash PBKDF2-SHA256 con sal aleatoria (Web Crypto), nunca en texto plano. Antes se guardaba tal cual: lo corregí, y las cuentas viejas se convierten solas al entrar."
     ],
     "mejora": [
-     "La clave del perfil solo separa a los alumnos que usan la misma computadora y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor, como en Doo Barber."
+     "Sin servidor, quien use ese navegador puede alterar o borrar el progreso. Para algo con calificaciones reales lo movería a un servidor, como en Doo Barber."
     ]
    },
    "fotos": [
@@ -1165,10 +1166,11 @@ window.PROYECTOS = {
    "seguridad": {
     "aplica": [
      "Todo corre en el navegador; las canciones y favoritas no salen de él.",
-     "El nombre de usuario se muestra con textContent."
+     "El nombre de usuario se muestra con textContent.",
+     "La contraseña se guarda como hash PBKDF2-SHA256 con sal aleatoria (Web Crypto), nunca en texto plano. Antes se guardaba tal cual: lo corregí, y las cuentas viejas se convierten solas al entrar."
     ],
     "mejora": [
-     "La contraseña solo separa perfiles en el mismo navegador y se guarda tal cual en localStorage. En un sistema real iría con hash en un servidor."
+     "Sin servidor, quien use ese navegador puede alterar o borrar los favoritos. Para cuentas reales lo movería a un servidor."
     ]
    },
    "fotos": [
@@ -2478,10 +2480,11 @@ window.PROYECTOS = {
    "seguridad": {
     "aplica": [
      "Everything runs in the browser: there is no server or database to attack, and no data is sent anywhere.",
-     "Questions and options are rendered with textContent."
+     "Questions and options are rendered with textContent.",
+     "Each profile password is stored as a PBKDF2-SHA256 hash with a random salt (Web Crypto), never in plain text. It used to be stored as-is: I fixed it, and old accounts are converted automatically on login."
     ],
     "mejora": [
-     "The profile password only separates students on the same computer and is stored as-is in localStorage. In a real system it would be hashed on a server, as in Doo Barber."
+     "Without a server, anyone using that browser can alter or erase the progress. For real grades I would move it to a server, as in Doo Barber."
     ]
    },
    "fotos": [
@@ -2599,10 +2602,11 @@ window.PROYECTOS = {
    "seguridad": {
     "aplica": [
      "Everything runs in the browser; songs and favorites never leave it.",
-     "The username is rendered with textContent."
+     "The username is rendered with textContent.",
+     "The password is stored as a PBKDF2-SHA256 hash with a random salt (Web Crypto), never in plain text. It used to be stored as-is: I fixed it, and old accounts are converted automatically on login."
     ],
     "mejora": [
-     "The password only separates profiles in the same browser and is stored as-is in localStorage. In a real system it would be hashed on a server."
+     "Without a server, anyone using that browser can alter or erase the favorites. For real accounts I would move it to a server."
     ]
    },
    "fotos": [
