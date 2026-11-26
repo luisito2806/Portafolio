@@ -443,12 +443,15 @@
               <h3>Lightship Weather</h3>
               <p>API de clima que lee la información de cada ciudad desde archivos Markdown. El servidor con Express expone /api/clima/:ciudad y la página lo consume para mostrar el clima de cada ciudad con tarjetas.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>3 medidas</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>API de solo lectura: no recibe datos del usuario ni guarda nada.</li>
-                    <li>La ciudad de la URL se valida contra una lista blanca antes de leer el disco, así nadie puede pedir “../algo” para leer archivos fuera de la carpeta de datos.</li>
                     <li>Si la ciudad no existe responde 404 en JSON con la lista de ciudades disponibles, sin mostrar errores internos.</li>
+                  </ul>
+                  <p class="mejora-titulo">Lo que mejoraría</p>
+                  <ul class="mejoras">
+                    <li>La ciudad se usa para armar la ruta del archivo. Ya la validé contra una lista blanca en el código, pero el demo en vivo todavía no tiene esa versión.</li>
                   </ul>
                 </div>
               </details>

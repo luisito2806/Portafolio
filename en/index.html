@@ -443,12 +443,15 @@
               <h3>Lightship Weather</h3>
               <p>Weather API that reads each city’s data from Markdown files. The Express server exposes /api/clima/:ciudad and the page consumes it to show each city’s weather as cards.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>3 measures</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>2 measures</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Read-only API: it doesn't take user data or store anything.</li>
-                    <li>The city in the URL is checked against an allow-list before reading from disk, so nobody can request “../something” to read files outside the data folder.</li>
                     <li>If the city doesn't exist it returns a JSON 404 with the available cities, without exposing internal errors.</li>
+                  </ul>
+                  <p class="mejora-titulo">What I'd improve</p>
+                  <ul class="mejoras">
+                    <li>The city is used to build the file path. I already validate it against an allow-list in the code, but the live demo does not have that version yet.</li>
                   </ul>
                 </div>
               </details>
