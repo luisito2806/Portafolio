@@ -1246,8 +1246,22 @@ footer {
 }
 
 .cv header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
   padding-bottom: 10px;
   border-bottom: 2px solid #1f6f5c;
+}
+
+/* Foto en el CV: recorte 4:5 centrado en la cara, igual que en la portada */
+.cv-foto {
+  flex: none;
+  width: 26mm;
+  height: 32.5mm;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 6px;
+  border: 1px solid #d5dbd8;
 }
 
 .cv h1 {
@@ -1315,6 +1329,15 @@ footer {
   .cv {
     padding: 24px 18px;
     font-size: 10pt;
+  }
+
+  .cv header {
+    gap: 14px;
+  }
+
+  .cv-foto {
+    width: 72px;
+    height: 90px;
   }
 }
 

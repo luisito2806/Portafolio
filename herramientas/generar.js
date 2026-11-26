@@ -597,9 +597,12 @@ function paginaCv(lang) {
 
   <article class="cv">
     <header>
-      <h1>${esc(perfil.nombre)}</h1>
-      <p class="cv-titulo">${esc(t(perfil.titulo, lang))}</p>
-      <p class="cv-contacto">${contacto}</p>
+      <img class="cv-foto" src="${base}${perfil.foto}" alt="${esc(perfil.nombre)}" width="900" height="1600" onerror="this.remove()">
+      <div>
+        <h1>${esc(perfil.nombre)}</h1>
+        <p class="cv-titulo">${esc(t(perfil.titulo, lang))}</p>
+        <p class="cv-contacto">${contacto}</p>
+      </div>
     </header>
 
     <section>
