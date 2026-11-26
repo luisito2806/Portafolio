@@ -643,15 +643,13 @@
               <h3>Lista de tareas</h3>
               <p>Lista de tareas que se guarda en el navegador. Agregar, marcar como hecha y borrar, sin perder nada al recargar la página.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>2 medidas</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Seguridad</span><small>4 medidas</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Las tareas solo viven en el navegador de quien las escribe; no se envían a ningún servidor.</li>
+                    <li>Cada tarea se arma con textContent, así una tarea como &lt;img onerror=…&gt; se ve como texto y no ejecuta nada. Antes usaba innerHTML: lo encontré revisando mi código y lo corregí.</li>
+                    <li>Lo guardado en localStorage se valida al cargar: si está dañado o alterado se descarta en lugar de romper la página.</li>
                     <li>No se guardan tareas vacías.</li>
-                  </ul>
-                  <p class="mejora-titulo">Lo que mejoraría</p>
-                  <ul class="mejoras">
-                    <li>El texto de cada tarea se pinta con innerHTML. Lo cambiaría por textContent para que una tarea no pueda inyectar HTML.</li>
                   </ul>
                 </div>
               </details>

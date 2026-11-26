@@ -643,15 +643,13 @@
               <h3>Lista de tareas</h3>
               <p>To-do list saved in the browser. Add, mark as done and delete, without losing anything when the page reloads.</p>
               <details class="seguridad-proyecto">
-                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>2 measures</small></summary>
+                <summary><svg class="candado" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span>Security</span><small>4 measures</small></summary>
                 <div class="contenido-seguridad">
                   <ul>
                     <li>Tasks only live in the writer's browser; they're never sent to a server.</li>
+                    <li>Each task is built with textContent, so a task like &lt;img onerror=…&gt; shows up as text and runs nothing. It used to use innerHTML: I found it reviewing my own code and fixed it.</li>
+                    <li>Data saved in localStorage is validated on load: if it is corrupted or tampered with, it is discarded instead of breaking the page.</li>
                     <li>Empty tasks are not saved.</li>
-                  </ul>
-                  <p class="mejora-titulo">What I'd improve</p>
-                  <ul class="mejoras">
-                    <li>Each task's text is rendered with innerHTML. I'd switch to textContent so a task can't inject HTML.</li>
                   </ul>
                 </div>
               </details>

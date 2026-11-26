@@ -118,10 +118,9 @@ module.exports = {
   'lista-tareas': {
     aplica: [
       { es: 'Las tareas solo viven en el navegador de quien las escribe; no se envían a ningún servidor.', en: "Tasks only live in the writer's browser; they're never sent to a server." },
+      { es: 'Cada tarea se arma con textContent, así una tarea como <img onerror=…> se ve como texto y no ejecuta nada. Antes usaba innerHTML: lo encontré revisando mi código y lo corregí.', en: "Each task is built with textContent, so a task like <img onerror=…> shows up as text and runs nothing. It used to use innerHTML: I found it reviewing my own code and fixed it." },
+      { es: 'Lo guardado en localStorage se valida al cargar: si está dañado o alterado se descarta en lugar de romper la página.', en: 'Data saved in localStorage is validated on load: if it is corrupted or tampered with, it is discarded instead of breaking the page.' },
       { es: 'No se guardan tareas vacías.', en: 'Empty tasks are not saved.' },
-    ],
-    mejora: [
-      { es: 'El texto de cada tarea se pinta con innerHTML. Lo cambiaría por textContent para que una tarea no pueda inyectar HTML.', en: "Each task's text is rendered with innerHTML. I'd switch to textContent so a task can't inject HTML." },
     ],
   },
 };
