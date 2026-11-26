@@ -171,8 +171,9 @@ window.PROYECTOS = {
     "Ventas y caja: lector de código de barras, atajos de teclado, apertura y corte de caja, IVA configurable.",
     "Inventario y compras: alertas de productos por agotarse y una lista de compra sugerida según lo que se vendió.",
     "Reportes: utilidad por día, más vendidos, nómina y crédito de trabajadores, exportación a Excel.",
-    "Pensado para la tienda: respaldo automático diario, copia a USB e instalador que deja el sistema arrancando solo en Windows.",
-    "Pruebas automáticas de la API, la base de datos, los cálculos de dinero y la sincronización."
+    "Pensado para la tienda: respaldo automático diario, copia a USB y un instalador de un solo .exe que lleva Node.js y PostgreSQL adentro, así que se instala sin internet y arranca solo en Windows.",
+    "Panel en la nube: cada tienda manda sus ventas por internet o por USB, y el panel mantiene separados los datos de cada tienda.",
+    "93 pruebas automáticas de la API, la base de datos, los cálculos de dinero y la sincronización."
    ],
    "tecnologias": [
     "Node.js",
@@ -1607,8 +1608,9 @@ window.PROYECTOS = {
     "Sales and cash register: barcode scanner, keyboard shortcuts, opening and closing the register, configurable VAT.",
     "Inventory and purchasing: low-stock alerts and a suggested shopping list based on what sold.",
     "Reports: daily profit, best sellers, payroll and worker credit, Excel export.",
-    "Built for the store: automatic daily backup, USB copy and an installer that makes the system start on its own on Windows.",
-    "Automated tests for the API, the database, money calculations and syncing."
+    "Built for the store: automatic daily backup, USB copy and a single-.exe installer that bundles Node.js and PostgreSQL, so it installs without internet and starts on its own on Windows.",
+    "Cloud dashboard: each store sends its sales over the internet or by USB, and the dashboard keeps every store’s data separate.",
+    "93 automated tests for the API, the database, money calculations and syncing."
    ],
    "tecnologias": [
     "Node.js",

@@ -50,8 +50,9 @@ module.exports = {
       'Sales and cash register: barcode scanner, keyboard shortcuts, opening and closing the register, configurable VAT.',
       'Inventory and purchasing: low-stock alerts and a suggested shopping list based on what sold.',
       'Reports: daily profit, best sellers, payroll and worker credit, Excel export.',
-      'Built for the store: automatic daily backup, USB copy and an installer that makes the system start on its own on Windows.',
-      'Automated tests for the API, the database, money calculations and syncing.',
+      'Built for the store: automatic daily backup, USB copy and a single-.exe installer that bundles Node.js and PostgreSQL, so it installs without internet and starts on its own on Windows.',
+      'Cloud dashboard: each store sends its sales over the internet or by USB, and the dashboard keeps every store’s data separate.',
+      '93 automated tests for the API, the database, money calculations and syncing.',
     ],
     fotos: {
       '01-login': ['Sign-in.', 'Passwords are stored with bcrypt. If the user does not exist, the server compares against a dummy hash so the response takes the same time and does not reveal which users exist. The session is regenerated on login, and the cookie is httpOnly, SameSite=strict and lasts 12 hours.'],
