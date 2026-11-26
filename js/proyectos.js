@@ -979,11 +979,10 @@ window.PROYECTOS = {
    "seguridad": {
     "aplica": [
      "API de solo lectura: no recibe datos del usuario ni guarda nada.",
+     "La ciudad de la URL se valida contra una lista blanca antes de leer el disco, así nadie puede pedir “../algo” para leer archivos fuera de la carpeta de datos. Antes la ruta se armaba directo con la ciudad: lo encontré revisando mi código y lo corregí.",
      "Si la ciudad no existe responde 404 en JSON con la lista de ciudades disponibles, sin mostrar errores internos."
     ],
-    "mejora": [
-     "La ciudad se usa para armar la ruta del archivo. Ya la validé contra una lista blanca en el código, pero el demo en vivo todavía no tiene esa versión."
-    ]
+    "mejora": []
    },
    "fotos": [
     {
@@ -2416,11 +2415,10 @@ window.PROYECTOS = {
    "seguridad": {
     "aplica": [
      "Read-only API: it doesn't take user data or store anything.",
+     "The city in the URL is checked against an allow-list before reading from disk, so nobody can request “../something” to read files outside the data folder. The path used to be built straight from the city: I found it reviewing my own code and fixed it.",
      "If the city doesn't exist it returns a JSON 404 with the available cities, without exposing internal errors."
     ],
-    "mejora": [
-     "The city is used to build the file path. I already validate it against an allow-list in the code, but the live demo does not have that version yet."
-    ]
+    "mejora": []
    },
    "fotos": [
     {
